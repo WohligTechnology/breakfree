@@ -13,8 +13,13 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
   $stateProvider
+  .state('login', {
+      url: "/",
+      templateUrl: "views/template-login.html",
+      controller: 'LoginCtrl'
+  })
     .state('home', {
-    url: "/",
+    url: "/home",
     templateUrl: "views/template.html",
     controller: 'HomeCtrl'
   });

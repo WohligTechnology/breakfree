@@ -9,6 +9,7 @@ templateservicemod.service('TemplateService', function() {
 
   this.init = function() {
     this.headermenu = "views/headermenu.html";
+    this.sidemenu = "views/sidemenu.html";
     this.header = "views/header.html";
     this.menu = "views/menu.html";
     this.slider = "views/slider.html";

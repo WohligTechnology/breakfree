@@ -22,7 +22,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     url: "/home",
     templateUrl: "views/template.html",
     controller: 'HomeCtrl'
-  });
+  })
+  .state('empcalendar', {
+  url: "/empcalendar",
+  templateUrl: "views/template.html",
+  controller: 'EmpcalendarCtrl'
+});
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });

@@ -8,22 +8,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  //Used to name the .html file
-
-  console.log("Testing Consoles");
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
 
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
-  $scope.mySlides = [
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-  ];
+  $scope.openaddcity=function() {
+    var open = $uibModal.open({
+        animation: $scope.animationsEnabled,
+        templateUrl: 'views/modal/addcity.html',
+        controller: 'HomeCtrl'
+      });
+
+  };
+
 })
 
 .controller('headerctrl', function($scope, TemplateService) {

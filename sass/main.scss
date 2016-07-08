@@ -17,6 +17,7 @@ $font-color: #515974 !default;
 $total-color: #a5a6bb !default;
 $menutxt-color: #e4ebf7 !default;
 $bottom-color: #0c1224 !default;
+$page-color: #f2f6fc !default;
 $font-family-sans-serif: "Noto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: "Noto", Georgia, "Times New Roman", Times, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -62,6 +63,13 @@ a {
     border-color: $brand-primary;
     outline: 0;
     @include box-shadow(none);
+}
+.panel-default > .panel-heading {
+  background-color: $page-color;
+  border-color:#e1e7f0;
+}
+.panel-body{
+  background-color: $page-color;
 }
 .sidemenu {
     position: fixed;
@@ -156,7 +164,7 @@ a {
     height: 100vh;
 }
 .top-nav {
-    background-color: white;
+    background-color: $page-color;
     width: 100%;
     height: 60px;
 }
@@ -170,6 +178,7 @@ a {
     font-size: 18px;
     border: 0;
     font-weight: 300;
+    background-color: $page-color;
     &:focus {
         outline: 0;
         border: 0;
@@ -356,6 +365,23 @@ a {
                 height: 150px;
                 margin: 10px;
                 position: relative;
+
+                  .editbtn {
+                      position: absolute;
+                      top: 5%;
+                      left: 85%;
+                      width: 20px;
+                  }
+                h4 {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color: white;
+                    font-size: 26px;
+                    letter-spacing: 1px;
+                    margin:0;
+                }
             }
             .addpost {
                 width: 100%;
@@ -386,7 +412,6 @@ a {
                 font-size: 50px;
                 margin: 24px 0;
             }
-
         }
     }
 }

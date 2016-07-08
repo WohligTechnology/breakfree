@@ -65,11 +65,15 @@ a {
     @include box-shadow(none);
 }
 .panel-default > .panel-heading {
-  background-color: $page-color;
-  border-color:#e1e7f0;
+    background-color: $page-color;
+    border-color: #e1e7f0;
+    border-width: 2px;
 }
-.panel-body{
-  background-color: $page-color;
+.panel-title {
+    color: $font-color;
+}
+.panel-body {
+    background-color: $page-color;
 }
 .sidemenu {
     position: fixed;
@@ -352,7 +356,7 @@ a {
         li {
             display: inline-block;
             .adddetail {
-                border: 1px dotted black;
+                border: 1px dashed #aaafb8;
                 width: 175px;
                 height: 150px;
                 margin: 10px;
@@ -365,13 +369,12 @@ a {
                 height: 150px;
                 margin: 10px;
                 position: relative;
-
-                  .editbtn {
-                      position: absolute;
-                      top: 5%;
-                      left: 85%;
-                      width: 20px;
-                  }
+                .editbtn {
+                    position: absolute;
+                    top: 5%;
+                    left: 85%;
+                    width: 20px;
+                }
                 h4 {
                     position: absolute;
                     top: 50%;
@@ -380,7 +383,7 @@ a {
                     color: white;
                     font-size: 26px;
                     letter-spacing: 1px;
-                    margin:0;
+                    margin: 0;
                 }
             }
             .addpost {

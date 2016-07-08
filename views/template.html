@@ -4,12 +4,12 @@
 <div ng-include="template.content" class="template content"></div>
 <div ng-include="template.footermenu" class="template footermenu"></div>
 <div ng-include="template.footer" class="template footer"></div> -->
-<aside ng-include="template.sidemenu" class="col-md-2 template sidemenu nav-vertical"></aside>
+<header ng-include="template.header" class="header-position nav-vertical"></header>
 <div class="main-container">
-  <header ng-include="template.header" class="col-md-10 template nav-vertical"></header>
+  <aside ng-include="template.sidemenu" class="sidemenu nav-vertical"></aside>
   <div class="template content-container">
     <section class="view-container animate-fade-up">
-      <div class="page page-dashboard">
+      <div class="page">
         <div ng-include="template.content"></div>
       </div>
     </section>

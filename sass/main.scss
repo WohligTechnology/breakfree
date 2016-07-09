@@ -418,7 +418,36 @@ a {
         }
     }
 }
-
+.city {
+    position: relative;
+    .form-control {
+        width: 76%;
+        border-color: #aaafb8;
+    }
+    .cityspace {
+        margin: 42px 0;
+    }
+    label {
+        color: $font-color;
+    }
+}
+.city-img {
+    width: 76%;
+    height: 140px;
+    border: 1px solid #aaafb8;
+    margin: 46px auto 26px;
+}
+.btn-space {
+    margin: 54px 30px 30px;
+}
+.close1 {
+    img {
+        width: 25px;
+        position: absolute;
+        top: -30px;
+        right: 18px;
+    }
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";

@@ -25,6 +25,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
 
 })
+
+.controller('AdminCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("admin");
+    $scope.menutitle = NavigationService.makeactive("Admin");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
 .controller('EmpcalendarCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("empcalendar");
@@ -71,11 +80,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.events = [
     {
       date: tomorrow,
-      status: 'full'
+      status: 'null'
     },
     {
       date: afterTomorrow,
-      status: 'partially'
+      status: 'null'
     }
   ];
 

@@ -32,6 +32,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   url: "/empcalendar",
   templateUrl: "views/template.html",
   controller: 'EmpcalendarCtrl'
+})
+.state('leadmanagement', {
+url: "/leadmanagement",
+templateUrl: "views/template.html",
+controller: 'leadmanagementCtrl'
+})
+.state('dashboard', {
+url: "/dashboard",
+templateUrl: "views/template.html",
+controller: 'dashboardCtrl'
 });
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);

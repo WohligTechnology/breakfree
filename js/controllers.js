@@ -138,5 +138,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
 })
-
+.controller('leadmanagementCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("leadmanagement");
+    $scope.menutitle = NavigationService.makeactive("Lead Management");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('dashboardCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("dashboard");
+    $scope.menutitle = NavigationService.makeactive("Dashboard");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 ;

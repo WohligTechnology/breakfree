@@ -55,3 +55,43 @@ position: relative;
 .btn-sm i{
   color: #9ca2a8;
 }
+.tableholder{
+  .table > thead:first-child > tr:first-child > th {
+    border-top: 0;
+}
+}
+.stat-done{
+  border:1px solid #57c059;
+  display: inline-block;
+  margin-top: 3px;
+  padding: 9px 12px;
+
+}
+.stat-pending{
+  border:1px solid #f45b63;
+  display: inline-block;
+  margin-top: 5px;
+
+  padding: 9px 12px;
+}
+.tableholder{
+  font-weight: 700;
+}
+.done{
+  color: #57c059;
+}
+.pending{
+  color: #f45b63;
+}
+.btn-default.active:hover{
+  color:#f45b63;
+  background-color: #fff;
+  border-color: #f45b63;
+}
+.calendar .btn-sm{
+  font-weight: 500;
+}
+.tableholder p,th{
+  font-weight: 500;
+  color: #a5a6bb;
+}

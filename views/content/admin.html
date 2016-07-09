@@ -2,18 +2,19 @@
     <div class="panel-heading">
         <h3 class="panel-title">Admin</h3>
     </div>
-    <div class="panel-body">
-        <div class="admindetail">
-            <h3 class="submenu pull-left">Admin Detail</h3>
-            <div class="search pull-right">
-                <span><i class="fa fa-search"></i></span>
-                <input type="text" class="searchsize" name="name" placeholder="Search...">
-            </div>
+    <div class="admindetail">
+        <h3 class="submenu pull-left">Admin Detail</h3>
+        <div class="search pull-right">
+            <span><i class="fa fa-search"></i></span>
+            <input type="text" class="searchsize" name="name" placeholder="Search...">
         </div>
+    </div>
+    <div class="panel-body">
+
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-md-9">
-                <div class="checkbox custom-checkbox pull-left">
+                <div class="marall custom-checkbox pull-left">
                     <input type="checkbox" id="all">
                     <label for="all"><span></span>All</label>
                 </div>
@@ -26,17 +27,17 @@
                     <span>of</span>
                     <span>471</span>
                 </div>
-                <div class="show pull-right">
+                <div class="shows pull-right">
                     <div class="category-list dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle text-uppercase" data-toggle="dropdown">
+                        <button type="button" class="btns dropdown-toggle" data-toggle="dropdown">
                             Show <span class="fa fa-chevron-down"></span>
                         </button>
-                        <ul class="dropdown-menu">
-                            <!-- <li>Corporate Conference</li>
-                        <li>Product Launch</li>
-                        <li>Reward &amp; Recognition</li>
-                        <li>Press Conference</li> -->
-                        </ul>
+                        <!-- <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul> -->
                     </div>
                 </div>
                 <table class="table table-hover table-responsive">
@@ -91,7 +92,7 @@
                             </td>
                             <td>ASD145</td>
                             <td>
-                                <span>Raj Shah</span>
+                                <span>Abhishek Kapoor</span>
                             </td>
                             <td>
                                 <span>Ghatkopar</span>
@@ -114,8 +115,8 @@
                         <tr>
                             <td>
                               <div class="checkbox checkbox-custom">
-                                  <input type="checkbox" id="check">
-                                  <label for="check"><span></span></label>
+                                  <input type="checkbox" id="check1">
+                                  <label for="check1"><span></span></label>
                               </div>
                             </td>
                             <td>ASD145</td>
@@ -143,8 +144,8 @@
                         <tr>
                             <td>
                               <div class="checkbox checkbox-custom">
-                                  <input type="checkbox" id="check">
-                                  <label for="check"><span></span></label>
+                                  <input type="checkbox" id="check2">
+                                  <label for="check2"><span></span></label>
                               </div>
                             </td>
                             <td>ASD145</td>
@@ -173,12 +174,12 @@
                 </table>
             </div>
             <div class="col-md-3">
-                <button class="btn btn-info pull-right" ui-sref="createuser" style="margin-top: -7px;">
+                <button class="btn btn1 btn-info pull-right">
                     Create New Admin<i class="fa fa-plus"></i>
                 </button>
             </div>
         </div>
-        <footer class="table-footer" ng-if="userdata.data.length>0">
+        <!-- <footer class="table-footer" ng-if="userdata.data.length>0">
             <div class="row">
                 <div class="col-md-6 page-num-info">
                     <span>
@@ -196,6 +197,6 @@
                     <uib-pagination total-items="userdata.totalpages" ng-model="pagedata.page" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="search();" items-per-page="pagedata.limit" ng-hide="userdata.totalpages==1"></uib-pagination>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </div>
 </div>

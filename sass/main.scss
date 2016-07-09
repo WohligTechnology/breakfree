@@ -2,6 +2,7 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
@@ -63,6 +64,104 @@ a {
     border-color: $brand-primary;
     outline: 0;
     @include box-shadow(none);
+}
+.custom-checkbox {
+  input[type="checkbox"] {
+      display: none;
+  }
+  input[type="checkbox"] + label {
+      font-size: 16px;
+      position: relative;
+      &:before {
+          content: "";
+          width: 15px;
+          height: 15px;
+          display: block;
+          position: absolute;
+          top: 1px;
+          transform: rotate(90deg);
+      }
+  }
+  input[type="checkbox"] + label span {
+      display: inline-block;
+      @include square(15px);
+      vertical-align: middle;
+      cursor: pointer;
+      border: 1px solid $font-color;
+      border-radius: 4px;
+      @include transition(all 300ms linear);
+      &:after {
+          content: "";
+          @include square(9px);
+          margin: 1px 0px 1px 1px;
+          display: block;
+          border-radius: 2px;
+          background-color: $font-color;
+          opacity: 0;
+          @include transition(all 300ms linear);
+      }
+  }
+  input[type="checkbox"]:checked + label span {
+      @include transition(all 300ms linear);
+      &:after {
+          opacity: 1;
+          @include transition(all 300ms linear);
+      }
+  }
+  input[type="checkbox"] + label span,
+  input[type="checkbox"]:checked + label span {
+      @include transition(all 0.4s linear);
+      margin-right: 0;
+  }
+}
+.checkbox-custom {
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"] + label {
+        font-size: 16px;
+        position: relative;
+        &:before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: block;
+            position: absolute;
+            top: 1px;
+            transform: rotate(90deg);
+        }
+    }
+    input[type="checkbox"] + label span {
+        display: inline-block;
+        @include square(15px);
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid #a5a6bb;
+        border-radius: 4px;
+        @include transition(all 300ms linear);
+        &:after {
+            content: "";
+            @include square(9px);
+            margin: 2px 0px 1px 2px;
+            display: block;
+            border-radius: 2px;
+            background-color: $font-color;
+            opacity: 0;
+            @include transition(all 300ms linear);
+        }
+    }
+    input[type="checkbox"]:checked + label span {
+        @include transition(all 300ms linear);
+        &:after {
+            opacity: 1;
+            @include transition(all 300ms linear);
+        }
+    }
+    input[type="checkbox"] + label span,
+    input[type="checkbox"]:checked + label span {
+        @include transition(all 0.4s linear);
+        margin-right: 0;
+    }
 }
 .panel-default > .panel-heading {
     background-color: $page-color;
@@ -446,6 +545,41 @@ a {
         position: absolute;
         top: -30px;
         right: 18px;
+    }
+}
+.th {
+    color: $font-color;
+}
+.checkbox {
+    margin: -4px 5px;
+    input[type="checkbox"] {
+        margin: 3px 0;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+    }
+    label {
+        color: $font-color;
+        vertical-align: text-top;
+        padding: 0;
+    }
+}
+.table > thead:first-child > tr:first-child > th {
+    border-top: 2px solid #e1e7f0;
+}
+.table > thead > tr > th {
+    border-color: #e1e7f0;
+}
+.table-hover > tbody > tr:hover {
+    background-color: #e1e7f0;
+}
+td {
+    color: $font-color;
+    .fa {
+        color: $font-color;
+        font-size: 20px;
+        font-weight: 100;
+        padding: 0 2px;
     }
 }
 //bootstrap forms

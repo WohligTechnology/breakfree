@@ -1,134 +1,187 @@
 <div class="panel panel-default table-dynamic">
-   <div class="panel-heading">
-      <strong>{{menutitle}}</strong>
-      <button class="btn btn-info pull-right" ui-sref="createuser" style="margin-top: -7px;">
-         <i class="fa fa-user-plus"></i> Create
-      </button>
-   </div>
-   <div class="panel-body">
-      <div class="table-filters">
-         <div class="row">
-            <div class="col-sm-4 col-xs-6">
-               <form>
-                  <div class="row">
-                     <div class="col-md-9">
-                        <input type="text" placeholder="Search..." class="form-control" ng-model="pagedata.search">
-                     </div>
-                     <div class="col-md-2">
-                        <input type="submit" class="btn btn-info" value="Search" ng-click="search(pagedata)">
-                     </div>
-                  </div>
-               </form>
+    <div class="panel-heading">
+        <h3 class="panel-title">Admin</h3>
+    </div>
+    <div class="panel-body">
+        <div class="admindetail">
+            <h3 class="submenu pull-left">Admin Detail</h3>
+            <div class="search pull-right">
+                <span><i class="fa fa-search"></i></span>
+                <input type="text" class="searchsize" name="name" placeholder="Search...">
             </div>
-            <div class="col-sm-3 col-xs-6 filter-result-info" ng-if="userdata.data.length>0">
-               <span>
-            Showing
-            {{userdata.data.length}}/{{userdata.total}}
-            entries
-          </span>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="checkbox custom-checkbox pull-left">
+                    <input type="checkbox" id="all">
+                    <label for="all"><span></span>All</label>
+                </div>
+                <div class="sidebtn pull-right">
+                    <i class="fa fa-chevron-left"></i>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="pagenumber pull-right">
+                    <span>1-50</span>
+                    <span>of</span>
+                    <span>471</span>
+                </div>
+                <div class="show pull-right">
+                    <div class="category-list dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle text-uppercase" data-toggle="dropdown">
+                            Show <span class="fa fa-chevron-down"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <!-- <li>Corporate Conference</li>
+                        <li>Product Launch</li>
+                        <li>Reward &amp; Recognition</li>
+                        <li>Press Conference</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <table class="table table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <div class="th">
+                                    ID
+                                    <!-- <span ng-click="pagedata.sort = '_id';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == '_id && pagedata.sortnum == 1)}"></span>
+                         <span ng-click="pagedata.sort = '_id';pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == '_id' && pagedata.sortnum == -1)}"></span> -->
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
+                                    Name
+                                    <!-- <span ng-click="pagedata.sort = 'name';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'name' && pagedata.sortnum == 1)}"></span>
+                         <span ng-click="pagedata.sort = 'name';pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'name' && pagedata.sortnum == -1)}"></span> -->
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
+                                    Location
+                                    <!-- <span ng-click="pagedata.sort = 'email';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == 1)}"></span>
+                         <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
+                                    Start Date
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
+                                    End Date
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
+                                    Action
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-custom">
+                                    <input type="checkbox" id="check">
+                                    <label for="check"><span></span></label>
+                                </div>
+                            </td>
+                            <td>ASD145</td>
+                            <td>
+                                <span>Raj Shah</span>
+                            </td>
+                            <td>
+                                <span>Ghatkopar</span>
+                            </td>
+                            <td>
+                                <span>Sep 19, 2016</span>
+                            </td>
+                            <td>
+                                <span>Sep 17, 2016</span>
+                            </td>
+                            <td>
+                                <a>
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                                <a>
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                              <div class="checkbox checkbox-custom">
+                                  <input type="checkbox" id="check">
+                                  <label for="check"><span></span></label>
+                              </div>
+                            </td>
+                            <td>ASD145</td>
+                            <td>
+                                <span>Raj Shah</span>
+                            </td>
+                            <td>
+                                <span>Ghatkopar</span>
+                            </td>
+                            <td>
+                                <span>Sep 19, 2016</span>
+                            </td>
+                            <td>
+                                <span>Sep 17, 2016</span>
+                            </td>
+                            <td>
+                                <a>
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                                <a>
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                              <div class="checkbox checkbox-custom">
+                                  <input type="checkbox" id="check">
+                                  <label for="check"><span></span></label>
+                              </div>
+                            </td>
+                            <td>ASD145</td>
+                            <td>
+                                <span>Raj Shah</span>
+                            </td>
+                            <td>
+                                <span>Ghatkopar</span>
+                            </td>
+                            <td>
+                                <span>Sep 19, 2016</span>
+                            </td>
+                            <td>
+                                <span>Sep 17, 2016</span>
+                            </td>
+                            <td>
+                                <a>
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                                <a>
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-         </div>
-      </div>
-      <!-- <div class="panel-body" ng-if="userdata.data.length==0">
-         <p class="text-center text-uppercase" style="color:#000;"><strong>No Users Yet</strong></p>
-      </div> -->
-      <!-- <table class="table table-hover table-bordered table-responsive" ng-if="userdata.data.length>0"> -->
-      <table class="table table-hover table-responsive">
-         <thead>
-            <tr>
-              <th>
-
-              </th>
-               <th>
-                  <div class="th">
-                     id
-                     <!-- <span ng-click="pagedata.sort = '_id';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == '_id && pagedata.sortnum == 1)}"></span>
-                     <span ng-click="pagedata.sort = '_id';pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == '_id' && pagedata.sortnum == -1)}"></span> -->
-                  </div>
-               </th>
-               <th>
-                  <div class="th">
-                     Name
-                     <!-- <span ng-click="pagedata.sort = 'name';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'name' && pagedata.sortnum == 1)}"></span>
-                     <span ng-click="pagedata.sort = 'name';pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'name' && pagedata.sortnum == -1)}"></span> -->
-                  </div>
-               </th>
-               <th>
-                  <div class="th">
-                     Location
-                     <!-- <span ng-click="pagedata.sort = 'email';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == 1)}"></span>
-                     <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
-                  </div>
-               </th>
-               <th>
-                  <div class="th">
-                     Start Date
-                  </div>
-               </th>
-               <th>
-                  <div class="th">
-                     End Date
-                  </div>
-               </th>
-               <th>
-                  <div class="th">
-                     Action
-                  </div>
-               </th>
-            </tr>
-         </thead>
-         <tbody>
-           <tr>
-             <td> asbas</td>
-              <td>ASD145</td>
-              <td>
-                 <span>Raj Shah</span>
-              </td>
-              <td>
-                 <span>Ghatkopar</span>
-              </td>
-              <td>
-                 <span>Sep,19 2016</span>
-              </td>
-              <td>
-                 <span>Sep,17 2016</span>
-              </td>
-              <td>
-                 <span>
-                   <button class="btn btn-sm btn-info" ui-sref="edituser({id:data._id})">
-                     <i class="fa fa-pencil-square-o"></i>
-                   </button>&nbsp;&nbsp;&nbsp;
-                   <button class="btn btn-sm btn-danger" ng-click="deleteUser(data._id)">
-                     <i class="fa fa-trash"></i>
-                   </button>
-                 </span>
-              </td>
-           </tr>
-            <!-- <tr ng-repeat="data in userdata.data">
-               <td>{{data._id}}</td>
-               <td>
-                  <span>{{data.name}}</span>
-               </td>
-               <td>
-                  <span>{{data.email}}</span>
-               </td>
-               <td>
-                  <span>
-                    <button class="btn btn-sm btn-info" ui-sref="edituser({id:data._id})">
-                      <i class="fa fa-pencil-square-o"></i>
-                    </button>&nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-sm btn-danger" ng-click="deleteUser(data._id)">
-                      <i class="fa fa-trash"></i>
-                    </button>
-                  </span>
-               </td>
-            </tr> -->
-         </tbody>
-      </table>
-      <footer class="table-footer" ng-if="userdata.data.length>0">
-         <div class="row">
-            <div class="col-md-6 page-num-info">
-               <span>
+            <div class="col-md-3">
+                <button class="btn btn-info pull-right" ui-sref="createuser" style="margin-top: -7px;">
+                    Create New Admin<i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <footer class="table-footer" ng-if="userdata.data.length>0">
+            <div class="row">
+                <div class="col-md-6 page-num-info">
+                    <span>
             Show
             <select ng-model="pagedata.limit" ng-change="search();">
               <option value="10" selected>10</option>
@@ -138,11 +191,11 @@
             </select>
             entries per page
           </span>
+                </div>
+                <div class="col-md-6 text-right pagination-container">
+                    <uib-pagination total-items="userdata.totalpages" ng-model="pagedata.page" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="search();" items-per-page="pagedata.limit" ng-hide="userdata.totalpages==1"></uib-pagination>
+                </div>
             </div>
-            <div class="col-md-6 text-right pagination-container">
-               <uib-pagination total-items="userdata.totalpages" ng-model="pagedata.page" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="search();" items-per-page="pagedata.limit" ng-hide="userdata.totalpages==1"></uib-pagination>
-            </div>
-         </div>
-      </footer>
-   </div>
+        </footer>
+    </div>
 </div>

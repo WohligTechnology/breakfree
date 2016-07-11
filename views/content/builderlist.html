@@ -1,9 +1,9 @@
 <div class="panel panel-default table-dynamic">
     <div class="panel-heading">
-        <h3 class="panel-title">Broker</h3>
+        <h3 class="panel-title">Employee</h3>
     </div>
     <div class="admindetail">
-        <h3 class="submenu pull-left">Broker Detail</h3>
+        <h3 class="submenu pull-left">Employee Detail</h3>
         <div class="search pull-right">
             <span><i class="fa fa-search"></i></span>
             <input type="text" class="searchsize" name="name" placeholder="Search...">
@@ -30,7 +30,13 @@
                 <div class="shows pull-right">
                     <div class="category-list dropdown">
                         <button type="button" class="btns dropdown-toggle" data-toggle="dropdown">
-                            Show <span class="fa fa-chevron-down"></span>
+                            Alphabatically <span class="fa fa-chevron-down"></span>
+                        </button>
+                        <button type="button" class="btns dropdown-toggle" data-toggle="dropdown">
+                            Area Wise <span class="fa fa-chevron-down"></span>
+                        </button>
+                        <button type="button" class="btns dropdown-toggle" data-toggle="dropdown">
+                            Number of Project <span class="fa fa-chevron-down"></span>
                         </button>
                         <!-- <ul class="dropdown-menu">
                             <li></li>
@@ -60,24 +66,10 @@
                             </th>
                             <th>
                                 <div class="th">
-                                    Contact
+                                    Description
                                     <!-- <span ng-click="pagedata.sort = 'email';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == 1)}"></span>
                          <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
                                 </div>
-                            </th>
-                            <th>
-                              <div class="th">
-                                  Location
-                                  <!-- <span ng-click="pagedata.sort = 'email';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == 1)}"></span>
-                       <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
-                              </div>
-                            </th>
-                            <th>
-                              <div class="th text-center">
-                                  Rating
-                                  <!-- <span ng-click="pagedata.sort = 'email';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == 1)}"></span>
-                       <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
-                              </div>
                             </th>
                             <th>
                                 <div class="th">
@@ -104,15 +96,7 @@
                                 <span>Abhishek Kapoor</span>
                             </td>
                             <td>
-                                <span>9899898989</span>
-                            </td>
-                            <td>
-                                <span>Mumbai</span>
-                            </td>
-                            <td>
-                               <div class="rating">
-                                 <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
-                               </div>
+                                <span>A&amp;0 realty is the leagcy created by the two renwoned</span>
                             </td>
 
                             <td>
@@ -136,14 +120,8 @@
                                 <span>Raj Shah</span>
                             </td>
                             <td>
-                                <span>9899898989</span>
+                                <span>A&amp;0 realty is the leagcy created by the two renwoned</span>
                             </td>
-                            <td>
-                                <span>Mumbai</span>
-                            </td>
-                            <td> <div class="rating">
-                               <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
-                             </div></td>
 
                             <td>
                                 <a>
@@ -166,14 +144,9 @@
                                 <span>Raj Shah</span>
                             </td>
                             <td>
-                                <span>9899898989</span>
+                                <span>A&amp;0 realty is the leagcy created by the two renwoned</span>
                             </td>
-                            <td>
-                                <span>Mumbai</span>
-                            </td>
-<td> <div class="rating">
-   <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
- </div></td>
+
                             <td>
                                 <a>
                                     <i class="fa fa-pencil-square-o"></i>
@@ -187,8 +160,29 @@
                 </table>
             </div>
             <div class="col-md-3">
-                <button class="btn btn1 btn-info pull-right"  ui-sref="createbroker">
-                    Create New Broker<i class="fa fa-plus"></i>
+                <button class="btn btn1 btn-info pull-right" ui-sref="createbuilder">
+                    Create New Builder<i class="fa fa-plus"></i>
                 </button>
             </div>
         </div>
+        <!-- <footer class="table-footer" ng-if="userdata.data.length>0">
+            <div class="row">
+                <div class="col-md-6 page-num-info">
+                    <span>
+            Show
+            <select ng-model="pagedata.limit" ng-change="search();">
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+            entries per page
+          </span>
+                </div>
+                <div class="col-md-6 text-right pagination-container">
+                    <uib-pagination total-items="userdata.totalpages" ng-model="pagedata.page" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="search();" items-per-page="pagedata.limit" ng-hide="userdata.totalpages==1"></uib-pagination>
+                </div>
+            </div>
+        </footer> -->
+    </div>
+</div>

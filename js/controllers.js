@@ -42,6 +42,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
+.controller('CreateBrokerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("createbroker");
+    $scope.menutitle = NavigationService.makeactive("Create Broker");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('CreateBuilderCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("createbuilder");
+    $scope.menutitle = NavigationService.makeactive("Create Builder");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('CreateEmployeeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("createemployee");
+    $scope.menutitle = NavigationService.makeactive("Create Employee");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('CreateLeadCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("createlead");
+    $scope.menutitle = NavigationService.makeactive("Create Lead");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
 .controller('EmpcalendarCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("empcalendar");
@@ -271,6 +300,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.overStar = value;
   $scope.percent = 100 * (value / $scope.max);
 };
+    })
+    .controller('BuilderlistCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("builderlist");
+        $scope.menutitle = NavigationService.makeactive("Builder");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
     })
 
 ;

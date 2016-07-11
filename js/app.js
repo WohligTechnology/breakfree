@@ -57,6 +57,31 @@ controller: 'dashboardCtrl'
 url: "/brokerlist",
 templateUrl: "views/template.html",
 controller: 'BrokerlistCtrl'
+})
+.state('createbroker', {
+url: "/create-broker",
+templateUrl: "views/template.html",
+controller: 'CreateBrokerCtrl'
+})
+.state('createbuilder', {
+url: "/create-builder",
+templateUrl: "views/template.html",
+controller: 'CreateBuilderCtrl'
+})
+.state('createlead', {
+url: "/create-lead",
+templateUrl: "views/template.html",
+controller: 'CreateLeadCtrl'
+})
+.state('createemployee', {
+url: "/create-employee",
+templateUrl: "views/template.html",
+controller: 'CreateEmployeeCtrl'
+})
+.state('builderlist', {
+url: "/builderlist",
+templateUrl: "views/template.html",
+controller: 'BuilderlistCtrl'
 });
 
   $urlRouterProvider.otherwise("/");

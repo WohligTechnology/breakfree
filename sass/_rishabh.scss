@@ -99,6 +99,19 @@ position: relative;
   color: #ffd203;
   font-size: 20px;
   text-align: center;
-  &:focus
-  {outline: 0;}
+  span:focus{
+    outline: 0;
+  }
+}
+th{
+font-weight: 700;
+}
+.file-in{
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+
+}
+.ext-detail{
+  float: right;
 }

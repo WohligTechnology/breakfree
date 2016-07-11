@@ -193,6 +193,8 @@ a {
 .btn {
     padding: 9px 46px;
     font-size: 16px;
+    color: #fff;
+    font-weight: 700;
     background-color: $btn-color;
     border-color: $btn-color;
     letter-spacing: 1px;
@@ -537,8 +539,8 @@ a {
     }
 }
 .city-img {
-    width: 76%;
-    height: 140px;
+  width: 35%;
+  height: 165px;
     border: 1px solid #aaafb8;
     margin: 46px auto 26px;
 }
@@ -688,7 +690,7 @@ td {
   img{
     width:14px;
   }
-} 
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";

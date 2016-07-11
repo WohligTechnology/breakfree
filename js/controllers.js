@@ -34,6 +34,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
+.controller('CreateAdminCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("createadmin");
+    $scope.menutitle = NavigationService.makeactive("Create Admin");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
 .controller('EmpcalendarCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("empcalendar");

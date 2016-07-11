@@ -28,6 +28,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   templateUrl: "views/template.html",
   controller: 'AdminCtrl'
 })
+.state('createadmin', {
+url: "/create-admin",
+templateUrl: "views/template.html",
+controller: 'CreateAdminCtrl'
+})
   .state('empcalendar', {
   url: "/empcalendar",
   templateUrl: "views/template.html",

@@ -52,7 +52,13 @@ controller: 'leadmanagementCtrl'
 url: "/dashboard",
 templateUrl: "views/template.html",
 controller: 'dashboardCtrl'
+})
+.state('brokerlist', {
+url: "/brokerlist",
+templateUrl: "views/template.html",
+controller: 'BrokerlistCtrl'
 });
+
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });

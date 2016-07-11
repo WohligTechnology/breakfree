@@ -95,3 +95,10 @@ position: relative;
   font-weight: 500;
   color: #a5a6bb;
 }
+.rating{
+  color: #ffd203;
+  font-size: 20px;
+  text-align: center;
+  &:focus
+  {outline: 0;}
+}

@@ -602,7 +602,7 @@ td {
     }
 }
 .btn1 {
-  font-size: 14px;
+    font-size: 14px;
     padding: 9px 28px;
     margin-top: 12px;
     background-color: #f3bc3a;
@@ -697,6 +697,33 @@ td {
     img {
         width: 14px;
     }
+}
+.btn4 {
+    margin: 0 22px 0 8px;
+}
+.form-button {
+    margin: 50px 0 60px;
+}
+.city-imgs {
+    width: 79%;
+    height: 165px;
+    border: 1px solid #aaafb8;
+    margin: 24px auto 26px;
+}
+.bf-form{
+  .form-control {
+      border-color: $city-border;
+      background-color: $page-color;
+  }
+  label {
+      color: $font-color;
+  }
+}
+.addbtn{
+      margin: 12px 10px 0;
+}
+.boxsize{
+  resize: none;
 }
 //bootstrap forms
 /* Start writing sass here */

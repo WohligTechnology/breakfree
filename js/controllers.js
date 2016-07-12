@@ -70,6 +70,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+.controller('PropertyDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("propertydetail");
+    $scope.menutitle = NavigationService.makeactive("Property Detail");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 
 .controller('EmpcalendarCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file

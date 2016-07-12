@@ -73,6 +73,11 @@ url: "/create-lead",
 templateUrl: "views/template.html",
 controller: 'CreateLeadCtrl'
 })
+.state('propertydetail', {
+url: "/propertydetail",
+templateUrl: "views/template.html",
+controller: 'PropertyDetailCtrl'
+})
 .state('createemployee', {
 url: "/create-employee",
 templateUrl: "views/template.html",

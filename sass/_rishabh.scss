@@ -39,6 +39,7 @@
     height: 215px;
     width: 100%;
     position: relative;
+    margin: 13px 0;
 }
 .img-holder img {
     height: 215px;
@@ -108,4 +109,13 @@ th {
 .ext-detail {
     float: right;
     margin-right: 15px;
+}
+.match-property{
+  color: $font-color;
+}
+.wraper{
+  text-align: center;
+}
+.btn-pad{
+  width: 100%;
 }

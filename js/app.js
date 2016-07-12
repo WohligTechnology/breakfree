@@ -73,6 +73,16 @@ url: "/create-lead",
 templateUrl: "views/template.html",
 controller: 'CreateLeadCtrl'
 })
+.state('createproperty', {
+url: "/create-property",
+templateUrl: "views/template.html",
+controller: 'CreatePropertyCtrl'
+})
+.state('ameneties', {
+url: "/ameneties",
+templateUrl: "views/template.html",
+controller: 'AmenetiesCtrl'
+})
 .state('propertydetail', {
 url: "/propertydetail",
 templateUrl: "views/template.html",

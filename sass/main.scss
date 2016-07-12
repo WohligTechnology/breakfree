@@ -192,9 +192,8 @@ a {
 }
 .btn {
     padding: 9px 46px;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
-    font-weight: 700;
     background-color: $btn-color;
     border-color: $btn-color;
     letter-spacing: 1px;
@@ -279,8 +278,8 @@ a {
 .nav-vertical {
     padding: 0;
 }
-::-webkit-input-placeholder{
-  color:$font-color;
+::-webkit-input-placeholder {
+    color: $font-color;
 }
 .searchsize {
     width: 50%;
@@ -539,8 +538,8 @@ a {
     }
 }
 .city-img {
-  width: 35%;
-  height: 165px;
+    width: 35%;
+    height: 165px;
     border: 1px solid #aaafb8;
     margin: 46px auto 26px;
 }
@@ -603,6 +602,7 @@ td {
     }
 }
 .btn1 {
+  font-size: 14px;
     padding: 9px 28px;
     margin-top: 12px;
     background-color: #f3bc3a;
@@ -618,13 +618,20 @@ td {
 }
 .category-list {
     .btns {
-        font-size: 16px;
+        font-size: 14px;
         color: $font-color;
         background-color: transparent;
         border-color: #e1e7f0;
         padding: 9px 20px;
         border-style: solid;
     }
+    .btn3 {
+        padding: 9px 12px;
+        margin: 0 5px;
+    }
+}
+.show1 {
+    margin: 10px 42px;
 }
 .pagenumber {
     margin: 22px -12px 16px -25px;
@@ -659,8 +666,8 @@ td {
         .fa {
             color: #f5f9fd;
         }
-        ::-webkit-input-placeholder{
-          color:#f2f6fc;
+        ::-webkit-input-placeholder {
+            color: #f2f6fc;
         }
         .searchsize {
             width: 91%;
@@ -675,21 +682,21 @@ td {
     font-size: 16px;
     letter-spacing: 1px;
 }
-.btn2{
-  border-radius: 30px;
-  padding: 4px 12px !important;
-  border-color:$total-color !important;
+.btn2 {
+    border-radius: 30px;
+    padding: 4px 12px !important;
+    border-color: $total-color !important;
 }
-.img-collapse{
-      margin: 7px 12px 7px 0;
-      img{
-        width:14px;
-      }
+.img-collapse {
+    margin: 7px 12px 7px 0;
+    img {
+        width: 14px;
+    }
 }
-.img-cross{
-  img{
-    width:14px;
-  }
+.img-cross {
+    img {
+        width: 14px;
+    }
 }
 //bootstrap forms
 /* Start writing sass here */

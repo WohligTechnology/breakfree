@@ -38,8 +38,8 @@ controller: 'CreateAdminCtrl'
   templateUrl: "views/template.html",
   controller: 'EmpcalendarCtrl'
 })
-.state('emplist', {
-url: "/emplist",
+.state('employeelist', {
+url: "/employee",
 templateUrl: "views/template.html",
 controller: 'EmplistCtrl'
 })
@@ -54,7 +54,7 @@ templateUrl: "views/template.html",
 controller: 'dashboardCtrl'
 })
 .state('brokerlist', {
-url: "/brokerlist",
+url: "/broker",
 templateUrl: "views/template.html",
 controller: 'BrokerlistCtrl'
 })
@@ -79,12 +79,12 @@ templateUrl: "views/template.html",
 controller: 'CreateEmployeeCtrl'
 })
 .state('builderlist', {
-url: "/builderlist",
+url: "/builder",
 templateUrl: "views/template.html",
 controller: 'BuilderlistCtrl'
 });
 
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/home");
   $locationProvider.html5Mode(isproduction);
 });
 

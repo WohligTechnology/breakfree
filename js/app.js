@@ -83,6 +83,11 @@ url: "/create-employee",
 templateUrl: "views/template.html",
 controller: 'CreateEmployeeCtrl'
 })
+.state('editemployee', {
+url: "/edit-employee",
+templateUrl: "views/template.html",
+controller: 'EditEmployeeCtrl'
+})
 .state('builderlist', {
 url: "/builder",
 templateUrl: "views/template.html",

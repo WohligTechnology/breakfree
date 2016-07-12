@@ -166,6 +166,9 @@ a {
         margin-right: 0;
     }
 }
+.form-group {
+    margin-bottom: 20px;
+}
 .panel-default > .panel-heading {
     background-color: $page-color;
     border-color: #e1e7f0;
@@ -205,6 +208,7 @@ a {
     &:focus {
         background-color: $btn-color;
         border-color: $btn-color;
+        outline: 0;
     }
     &:active {
         background-color: $btn-color;

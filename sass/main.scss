@@ -166,6 +166,32 @@ a {
         margin-right: 0;
     }
 }
+.custom-select {
+    display: inline;
+    position: relative;
+    select {
+        cursor: pointer;
+        display: inline;
+        position: relative;
+        z-index: 99;
+        -webkit-appearance: none;
+    }
+    &:after {
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f078";
+        height: 18px;
+        padding: 0px 12px;
+        width: 40px;
+        color: $font-color;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        text-align: center;
+        font-size: 16px;
+        pointer-events: none;
+        z-index: 999;
+    }
+}
 .form-group {
     margin-bottom: 20px;
 }
@@ -714,20 +740,20 @@ td {
     border: 1px solid #aaafb8;
     margin: 24px auto 26px;
 }
-.bf-form{
-  .form-control {
-      border-color: $city-border;
-      background-color: $page-color;
-  }
-  label {
-      color: $font-color;
-  }
+.bf-form {
+    .form-control {
+        border-color: $city-border;
+        background-color: $page-color;
+    }
+    label {
+        color: $font-color;
+    }
 }
-.addbtn{
-      margin: 12px 10px 0;
+.addbtn {
+    margin: 12px 10px 0;
 }
-.boxsize{
-  resize: none;
+.boxsize {
+    resize: none;
 }
 //bootstrap forms
 /* Start writing sass here */

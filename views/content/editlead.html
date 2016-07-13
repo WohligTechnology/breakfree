@@ -1,4 +1,4 @@
-<div class="panel panel-default table-dynamic">
+<div class="panel panel-default table-dynamic" ng-init="showLog=false;showMeet=false;">
     <div class="panel-heading">
         <h3 class="panel-title">Edit Lead</h3>
     </div>
@@ -221,7 +221,7 @@
                 </div>
 
                 <div class="wraper">
-                    <button class="btn btn4 btn-primary">More Detail</button>
+                    <button class="btn btn4 btn7 btn-primary">More Property</button>
                 </div>
             </div>
         </div>
@@ -236,15 +236,15 @@
             </div>
             <div class="col-md-6">
                 <div class="form-button pull-right">
-                    <button class="btn btn4 btn-primary btn-padd">Lead Log</button>
-                    <button class="btn btn4 btn-primary btn-padd">New Meeting</button>
+                    <button class="btn btn4 btn-primary btn-padd" ng-click="showLog=true;showMeet=false;">Lead Log</button>
+                    <button class="btn btn4 btn-primary btn-padd" ng-click="showLog=false;showMeet=true;">New Meeting</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="panel panel-default table-dynamic">
+<div class="panel panel-default table-dynamic" ng-show="showLog">
     <div class="panel-heading">
         <h3 class="panel-title">Lead Log Detail</h3>
     </div>
@@ -289,7 +289,7 @@
     </div>
     </div>
 
-    <div class="panel panel-default table-dynamic">
+    <div class="panel panel-default table-dynamic" ng-show="showMeet">
         <div class="panel-heading">
             <h3 class="panel-title">New Meeting</h3>
         </div>
@@ -316,38 +316,16 @@
                 </form>
               </div>
               <div class="col-md-8">
-                <p class="propsize">Property to be shown</h4>
+                <p class="propsize">Property to be shown</p>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="img-holder">
                         <img src="img/mutha.jpg" alt="" class="img-responsive">
                         <span class="img-name text-uppercase">Mutha Tower Andheri</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="img-holder">
-                        <img src="img/mutha.jpg" alt="" class="img-responsive">
-                        <span class="img-name text-uppercase">Mutha Tower Andheri</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="img-holder">
-                        <img src="img/mutha.jpg" alt="" class="img-responsive">
-                        <span class="img-name text-uppercase">Mutha Tower Andheri</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="img-holder">
-                        <img src="img/mutha.jpg" alt="" class="img-responsive">
-                        <span class="img-name text-uppercase">Mutha Tower Andheri</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="img-holder">
-                        <img src="img/mutha.jpg" alt="" class="img-responsive">
-                        <span class="img-name text-uppercase">Mutha Tower Andheri</span>
+                        <div class="custcheck">
+                          <input type="checkbox" id="option">
+                          <label for="option"><span></span></label>
+                        </div>
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -355,8 +333,18 @@
                         <img src="img/mutha.jpg" alt="" class="img-responsive">
                         <span class="img-name text-uppercase">Mutha Tower Andheri</span>
                         <div class="custcheck">
-                          <input type="checkbox">
-                          <label><span></span></lqbel>
+                          <input type="checkbox" id="option2">
+                          <label for="option2"><span></span></label>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="img-holder">
+                        <img src="img/mutha.jpg" alt="" class="img-responsive">
+                        <span class="img-name text-uppercase">Mutha Tower Andheri</span>
+                        <div class="custcheck">
+                          <input type="checkbox" id="option3">
+                          <label for="option3"><span></span></label>
                         </div>
                     </div>
                   </div>

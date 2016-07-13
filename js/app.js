@@ -103,10 +103,25 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'CreatePropertyCtrl'
         })
+        .state('paymentdetail', {
+            url: "/paymentdetail",
+            templateUrl: "views/template.html",
+            controller: 'PaymentDetailCtrl'
+        })
         .state('ameneties', {
             url: "/ameneties",
             templateUrl: "views/template.html",
             controller: 'AmenetiesCtrl'
+        })
+        .state('images', {
+            url: "/images",
+            templateUrl: "views/template.html",
+            controller: 'ImagesCtrl'
+        })
+        .state('moreproperty', {
+            url: "/more-property",
+            templateUrl: "views/template.html",
+            controller: 'MorePropertyCtrl'
         });
 
     $urlRouterProvider.otherwise("/home");

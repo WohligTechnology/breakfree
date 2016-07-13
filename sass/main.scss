@@ -120,6 +120,57 @@ a {
         margin-top: -4px;
     }
 }
+.custcheck {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"] + label {
+        font-size: 16px;
+        position: relative;
+        &:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: block;
+            position: absolute;
+            top: 1px;
+            transform: rotate(90deg);
+        }
+    }
+    input[type="checkbox"] + label span {
+        display: inline-block;
+        @include square(20px);
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid $total-color;
+        @include transition(all 300ms linear);
+        &:after {
+            content: "";
+            @include square(20px);
+            margin: -1px 0 0 -1px;
+            display: block;
+            opacity: 0;
+            background-color: #f3bc3a;
+            @include transition(all 300ms linear);
+        }
+    }
+    input[type="checkbox"]:checked + label span {
+        @include transition(all 300ms linear);
+        &:after {
+            opacity: 1;
+            @include transition(all 300ms linear);
+        }
+    }
+    input[type="checkbox"] + label span,
+    input[type="checkbox"]:checked + label span {
+        @include transition(all 0.4s linear);
+        margin-right: 0;
+    }
+}
 .checkbox-custom {
     input[type="checkbox"] {
         display: none;
@@ -810,6 +861,9 @@ td {
 .btn6 {
     margin: 0 22px 0 0;
 }
+.btn7{
+  margin: 15px 22px 0 8px;
+}
 .form-button {
     margin: 50px 0 60px;
 }
@@ -878,26 +932,32 @@ td {
 .btn-highlight {
     background-color: transparent;
     color: #f3bc3a;
-    &:hover{
-    background-color:transparent;
-    color:#f3bc3a;
+    &:hover {
+        background-color: transparent;
+        color: #f3bc3a;
     }
-    &:focus{
-      background-color:transparent;
-      color:#f3bc3a;
+    &:focus {
+        background-color: transparent;
+        color: #f3bc3a;
     }
-    &:active{
-      background-color:transparent;
-      color:#f3bc3a;
-      box-shadow: none;
+    &:active {
+        background-color: transparent;
+        color: #f3bc3a;
+        box-shadow: none;
     }
-    &:active{
-      &:focus{
-        background-color:transparent;
-        color:#f3bc3a;
-        outline: 0;
-      }
+    &:active {
+        &:focus {
+            background-color: transparent;
+            color: #f3bc3a;
+            outline: 0;
+        }
     }
+}
+.form-btn{
+      margin: 24px 16px 60px;
+}
+.propsize{
+    margin: -4px 0;
 }
 //bootstrap forms
 /* Start writing sass here */

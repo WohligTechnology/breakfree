@@ -103,6 +103,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'CreatePropertyCtrl'
         })
+        .state('moredetail', {
+            url: "/more-detail",
+            templateUrl: "views/template.html",
+            controller: 'MoreDetailCtrl'
+        })
         .state('paymentdetail', {
             url: "/paymentdetail",
             templateUrl: "views/template.html",

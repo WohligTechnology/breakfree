@@ -807,6 +807,9 @@ td {
 .btn4 {
     margin: 0 22px 0 8px;
 }
+.btn6 {
+    margin: 0 22px 0 0;
+}
 .form-button {
     margin: 50px 0 60px;
 }
@@ -841,22 +844,22 @@ td {
         color: $font-color;
         font-weight: 700;
     }
-    .time{
-      color: $total-color;
-      span{
-        font-weight: 700px;
-      }
-    }
-    .event{
-      h4{
-        color: $font-color;
-        margin-top: 0;
-      }
-      p{
-        font-size: 14px;
+    .time {
         color: $total-color;
-        font-weight: 400;
-      }
+        span {
+            font-weight: 700px;
+        }
+    }
+    .event {
+        h4 {
+            color: $font-color;
+            margin-top: 0;
+        }
+        p {
+            font-size: 14px;
+            color: $total-color;
+            font-weight: 400;
+        }
     }
     hr {
         border-color: #8a8a8a;
@@ -870,6 +873,30 @@ td {
         color: $font-color;
         font-size: 15px;
         font-weight: 700;
+    }
+}
+.btn-highlight {
+    background-color: transparent;
+    color: #f3bc3a;
+    &:hover{
+    background-color:transparent;
+    color:#f3bc3a;
+    }
+    &:focus{
+      background-color:transparent;
+      color:#f3bc3a;
+    }
+    &:active{
+      background-color:transparent;
+      color:#f3bc3a;
+      box-shadow: none;
+    }
+    &:active{
+      &:focus{
+        background-color:transparent;
+        color:#f3bc3a;
+        outline: 0;
+      }
     }
 }
 //bootstrap forms

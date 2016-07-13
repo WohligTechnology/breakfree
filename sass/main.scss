@@ -861,8 +861,8 @@ td {
 .btn6 {
     margin: 0 22px 0 0;
 }
-.btn7{
-  margin: 15px 22px 0 8px;
+.btn7 {
+    margin: 15px 22px 0 8px;
 }
 .form-button {
     margin: 50px 0 60px;
@@ -953,11 +953,35 @@ td {
         }
     }
 }
-.form-btn{
-      margin: 24px 16px 60px;
+.form-btn {
+    margin: 24px 16px 60px;
 }
-.propsize{
+.propsize {
     margin: -4px 0;
+}
+.more-property {
+    h4 {
+        margin: 0;
+        padding: 0 14px;
+        color: $font-color;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+.more-propertyform{
+  margin-bottom: 30px;
+}
+.basicproperty{
+      padding: 10px 0 10px 10px;
+}
+.basicproperties{
+  padding: 28px 10px 10px 10px;
+  margin-bottom: 30px;
+}
+.ccheck{
+  label{
+    padding: 0 20px !important;
+  }
 }
 //bootstrap forms
 /* Start writing sass here */

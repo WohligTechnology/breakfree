@@ -1,132 +1,194 @@
 // JavaScript Document
 var firstapp = angular.module('firstapp', [
-  'ui.router',
-  'phonecatControllers',
-  'templateservicemod',
-  'navigationservice',
-  'pascalprecht.translate',
-  'angulartics',
-  'angulartics.google.analytics'
+    'ui.router',
+    'phonecatControllers',
+    'templateservicemod',
+    'navigationservice',
+    'pascalprecht.translate',
+    'angulartics',
+    'angulartics.google.analytics'
 ]);
 
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
-  // for http request with session
-  $httpProvider.defaults.withCredentials = true;
-  $stateProvider
-  .state('login', {
-      url: "/",
-      templateUrl: "views/template-login.html",
-      controller: 'LoginCtrl'
-  })
-    .state('home', {
-    url: "/home",
-    templateUrl: "views/template.html",
-    controller: 'HomeCtrl'
-  })
-  .state('admin', {
-  url: "/admin",
-  templateUrl: "views/template.html",
-  controller: 'AdminCtrl'
-})
-.state('createadmin', {
-url: "/create-admin",
-templateUrl: "views/template.html",
-controller: 'CreateAdminCtrl'
-})
-  .state('empcalendar', {
-  url: "/empcalendar",
-  templateUrl: "views/template.html",
-  controller: 'EmpcalendarCtrl'
-})
-.state('employeelist', {
-url: "/employee",
-templateUrl: "views/template.html",
-controller: 'EmplistCtrl'
-})
-.state('leadmanagement', {
-url: "/leadmanagement",
-templateUrl: "views/template.html",
-controller: 'leadmanagementCtrl'
-})
-.state('dashboard', {
-url: "/dashboard",
-templateUrl: "views/template.html",
-controller: 'dashboardCtrl'
-})
-.state('brokerlist', {
-url: "/broker",
-templateUrl: "views/template.html",
-controller: 'BrokerlistCtrl'
-})
-.state('createbroker', {
-url: "/create-broker",
-templateUrl: "views/template.html",
-controller: 'CreateBrokerCtrl'
-})
-.state('createbuilder', {
-url: "/create-builder",
-templateUrl: "views/template.html",
-controller: 'CreateBuilderCtrl'
-})
-.state('createlead', {
-url: "/create-lead",
-templateUrl: "views/template.html",
-controller: 'CreateLeadCtrl'
-})
-.state('createproperty', {
-url: "/create-property",
-templateUrl: "views/template.html",
-controller: 'CreatePropertyCtrl'
-})
-.state('ameneties', {
-url: "/ameneties",
-templateUrl: "views/template.html",
-controller: 'AmenetiesCtrl'
-})
-.state('propertydetail', {
-url: "/propertydetail",
-templateUrl: "views/template.html",
-controller: 'PropertyDetailCtrl'
-})
-.state('createemployee', {
-url: "/create-employee",
-templateUrl: "views/template.html",
-controller: 'CreateEmployeeCtrl'
-})
-.state('editemployee', {
-url: "/edit-employee",
-templateUrl: "views/template.html",
-controller: 'EditEmployeeCtrl'
-})
-.state('builderlist', {
-url: "/builder",
-templateUrl: "views/template.html",
-controller: 'BuilderlistCtrl'
+    // for http request with session
+    $httpProvider.defaults.withCredentials = true;
+    $stateProvider
+        .state('login', {
+            url: "/",
+            templateUrl: "views/template-login.html",
+            controller: 'LoginCtrl'
+        })
+        .state('home', {
+            url: "/home",
+            templateUrl: "views/template.html",
+            controller: 'HomeCtrl'
+        })
+        .state('dashboard', {
+            url: "/dashboard",
+            templateUrl: "views/template.html",
+            controller: 'DashboardCtrl'
+        })
+        .state('admin', {
+            url: "/admin",
+            templateUrl: "views/template.html",
+            controller: 'AdminCtrl'
+        })
+        .state('createadmin', {
+            url: "/create-admin",
+            templateUrl: "views/template.html",
+            controller: 'CreateAdminCtrl'
+        })
+        .state('employee', {
+            url: "/employee",
+            templateUrl: "views/template.html",
+            controller: 'EmployeeCtrl'
+        })
+        .state('createemployee', {
+            url: "/create-employee",
+            templateUrl: "views/template.html",
+            controller: 'CreateEmployeeCtrl'
+        })
+        .state('editemployee', {
+            url: "/edit-employee",
+            templateUrl: "views/template.html",
+            controller: 'EditEmployeeCtrl'
+        })
+        .state('empcalendar', {
+            url: "/employee-calendar",
+            templateUrl: "views/template.html",
+            controller: 'EmpCalendarCtrl'
+        })
+        .state('broker', {
+            url: "/broker",
+            templateUrl: "views/template.html",
+            controller: 'BrokerCtrl'
+        })
+        .state('createbroker', {
+            url: "/create-broker",
+            templateUrl: "views/template.html",
+            controller: 'CreateBrokerCtrl'
+        })
+        .state('builder', {
+            url: "/builder",
+            templateUrl: "views/template.html",
+            controller: 'BuilderCtrl'
+        })
+        .state('createbuilder', {
+            url: "/create-builder",
+            templateUrl: "views/template.html",
+            controller: 'CreateBuilderCtrl'
+        })
+        .state('lead', {
+            url: "/lead",
+            templateUrl: "views/template.html",
+            controller: 'LeadCtrl'
+        })
+        .state('createlead', {
+            url: "/create-lead",
+            templateUrl: "views/template.html",
+            controller: 'CreateLeadCtrl'
+        })
+        .state('editlead', {
+            url: "/edit-lead",
+            templateUrl: "views/template.html",
+            controller: 'EditLeadCtrl'
+        })
+        .state('propertydetail', {
+            url: "/property-detail",
+            templateUrl: "views/template.html",
+            controller: 'PropertyDetailCtrl'
+        })
+        .state('createproperty', {
+            url: "/create-property",
+            templateUrl: "views/template.html",
+            controller: 'CreatePropertyCtrl'
+        })
+        .state('ameneties', {
+            url: "/ameneties",
+            templateUrl: "views/template.html",
+            controller: 'AmenetiesCtrl'
+        });
+
+    $urlRouterProvider.otherwise("/home");
+    $locationProvider.html5Mode(isproduction);
 });
 
-  $urlRouterProvider.otherwise("/home");
-  $locationProvider.html5Mode(isproduction);
+firstapp.directive('uploadImage', function($http) {
+    return {
+        templateUrl: 'views/directive/uploadFile.html',
+        scope: {
+            model: '=ngModel',
+            callback: "=ngCallback"
+        },
+        link: function($scope, element, attrs) {
+            $scope.isMultiple = false;
+            $scope.inObject = false;
+            if (attrs.multiple || attrs.multiple === "") {
+                $scope.isMultiple = true;
+                $("#inputImage").attr("multiple", "ADD");
+            }
+            if (attrs.noView || attrs.noView === "") {
+                $scope.noShow = true;
+            }
+            if (attrs.inobj || attrs.inobj === "") {
+                $scope.inObject = true;
+            }
+            $scope.clearOld = function() {
+                $scope.model = [];
+            };
+            $scope.upload = function(image) {
+                console.log(image);
+                console.log("File");
+                var Template = this;
+                image.hide = true;
+                var formData = new FormData();
+                formData.append('file', image.file, image.name);
+                $http.post(uploadurl, formData, {
+                    headers: {
+                        'Content-Type': undefined
+                    },
+                    transformRequest: angular.identity
+                }).success(function(data) {
+                    if ($scope.callback) {
+                        $scope.callback(data);
+                    } else {
+                        if ($scope.isMultiple) {
+                            if ($scope.inObject) {
+                                $scope.model.push({
+                                    "image": data.data[0]
+                                });
+                            } else {
+                                $scope.model.push(data.data[0]);
+                            }
+                        } else {
+                            $scope.model = data.data[0];
+                        }
+                    }
+                });
+            };
+        }
+    };
 });
 
 
 firstapp.directive('img', function($compile, $parse) {
-  return {
-    restrict: 'E',
-    replace: false,
-    link: function($scope, element, attrs) {
-      var $element = $(element);
-      if (!attrs.noloading) {
-        $element.after("<img src='img/loading.gif' class='loading' />");
-        var $loading = $element.next(".loading");
-        $element.load(function() {
-          $loading.remove();
-          $(this).addClass("doneLoading");
-        });
-      } else {
-        $($element).addClass("doneLoading");
-      }
-    }
-  };
+    return {
+        restrict: 'E',
+        replace: false,
+        link: function($scope, element, attrs) {
+            var $element = $(element);
+            if (!attrs.noloading) {
+                $element.after("<img src='img/loading.gif' class='loading' />");
+                var $loading = $element.next(".loading");
+                $element.load(function() {
+                    $loading.remove();
+                    $(this).addClass("doneLoading");
+                });
+            } else {
+                $($element).addClass("doneLoading");
+            }
+        }
+    };
 });
 
 firstapp.directive('fancyboxBox', function($document) {
@@ -137,7 +199,7 @@ firstapp.directive('fancyboxBox', function($document) {
             var $element = $(element);
             var target;
             if (attr.rel) {
-               target = $("[rel='" + attr.rel + "']");
+                target = $("[rel='" + attr.rel + "']");
             } else {
                 target = element;
             }
@@ -155,8 +217,8 @@ firstapp.directive('fancyboxBox', function($document) {
 });
 
 
-firstapp.config(function ($translateProvider) {
-  $translateProvider.translations('en', LanguageEnglish);
-  $translateProvider.translations('hi', LanguageHindi);
-  $translateProvider.preferredLanguage('en');
+firstapp.config(function($translateProvider) {
+    $translateProvider.translations('en', LanguageEnglish);
+    $translateProvider.translations('hi', LanguageHindi);
+    $translateProvider.preferredLanguage('en');
 });

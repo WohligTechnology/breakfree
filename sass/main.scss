@@ -67,6 +67,9 @@ a {
     outline: 0;
     @include box-shadow(none);
 }
+.color-btn {
+    background-color: #f3bc3a;
+}
 .custom-checkbox {
     input[type="checkbox"] {
         display: none;
@@ -192,33 +195,6 @@ a {
         z-index: 999;
     }
 }
-.form-group {
-    margin-bottom: 20px;
-}
-.panel-default > .panel-heading {
-    background-color: $page-color;
-    border-color: #e1e7f0;
-    border-width: 2px;
-}
-.panel-title {
-    color: $font-color;
-}
-.panel-body {
-    background-color: $page-color;
-}
-.sidemenu {
-    position: fixed;
-    width: 213px;
-    margin-top: -60px;
-}
-.page {
-    margin-left: 233px;
-    margin-right: 10px;
-    padding: 15px 0 0;
-}
-.header-position {
-    margin-left: 213px;
-}
 .btn {
     padding: 9px 46px;
     font-size: 14px;
@@ -246,6 +222,95 @@ a {
         }
     }
 }
+.attach {
+    .btn {
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+.btn-upload {
+    position: relative;
+    overflow: hidden;
+    background-color: $btn-color;
+    border-color: $btn-color;
+    color: #fff;
+    padding: 9px 28px;
+    margin: 0 14px;
+    &:hover {
+        opacity: 0.80;
+        background-color: $btn-color;
+        border-color: $btn-color;
+    }
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        width: 100%;
+        height: 37px;
+        cursor: pointer;
+        opacity: 0;
+        filter:alpha(opacity=0);
+    }
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.panel-default > .panel-heading {
+    background-color: $page-color;
+    border-color: #e1e7f0;
+    border-width: 2px;
+}
+.panel-title {
+    color: $font-color;
+}
+.panel-body {
+    background-color: $page-color;
+}
+.sidemenu {
+    position: fixed;
+    width: 213px;
+    margin-top: -60px;
+}
+.page {
+    margin-left: 233px;
+    margin-right: 10px;
+    padding: 15px 0 0;
+}
+.header-position {
+    margin-left: 213px;
+}
+// .btn {
+//     padding: 9px 46px;
+//     font-size: 14px;
+//     color: #fff;
+//     background-color: $btn-color;
+//     border-color: $btn-color;
+//     letter-spacing: 1px;
+//     &:hover {
+//         opacity: 0.80;
+//         background-color: $btn-color;
+//         border-color: $btn-color;
+//     }
+//     &:focus {
+//         background-color: $btn-color;
+//         border-color: $btn-color;
+//         outline: 0;
+//     }
+//     &:active {
+//         background-color: $btn-color;
+//         border-color: $btn-color;
+//         &:focus,
+//         &:hover {
+//             background-color: $btn-color;
+//             border-color: $btn-color;
+//         }
+//     }
+// }
 .main-body {
     position: absolute;
     top: 50%;
@@ -567,8 +632,13 @@ a {
         color: $font-color;
     }
 }
+.img-upload {
+    .btn-upload {
+        margin: 0 7px;
+    }
+}
 .city-img {
-    width: 35%;
+    width: 80%;
     height: 165px;
     border: 1px solid #aaafb8;
     margin: 46px auto 26px;
@@ -644,7 +714,13 @@ td {
     }
 }
 .shows {
-    margin: 10px 46px;
+    margin: 10px 36px 10px 15px;
+}
+.shows1 {
+    margin: 10px 0;
+}
+.shows2 {
+    margin: 10px 0 10px 15px;
 }
 .category-list {
     .btns {
@@ -659,9 +735,9 @@ td {
         padding: 9px 12px;
         margin: 0 5px;
     }
-}
-.show1 {
-    margin: 10px 42px;
+    .fa {
+        margin: 0 3px;
+    }
 }
 .pagenumber {
     margin: 22px -12px 16px -25px;
@@ -755,39 +831,45 @@ td {
 .boxsize {
     resize: none;
 }
-.attach {
-    .btn {
-        &:hover {
-            color: #fff;
-            text-decoration: none;
-        }
+.btn-padd {
+    padding: 9px 28px;
+}
+.log {
+    border: 1px solid #8a8a8a;
+    p {
+        font-size: 15px;
+        color: $font-color;
+        font-weight: 700;
+    }
+    .time{
+      color: $total-color;
+      span{
+        font-weight: 700px;
+      }
+    }
+    .event{
+      h4{
+        color: $font-color;
+        margin-top: 0;
+      }
+      p{
+        font-size: 14px;
+        color: $total-color;
+        font-weight: 400;
+      }
+    }
+    hr {
+        border-color: #8a8a8a;
     }
 }
-.btn-upload {
-    position: relative;
-    overflow: hidden;
-    background-color: $btn-color;
-    border-color: $btn-color;
-    color: #fff;
-    padding: 9px 28px;
-    margin: 0 14px;
-    &:hover {
-        opacity: 0.80;
-        background-color: $btn-color;
-        border-color: $btn-color;
-    }
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        width: 100%;
-        height: 37px;
-        cursor: pointer;
-        opacity: 0;
-        filter:alpha(opacity=0);
+.padd {
+    padding: 14px;
+}
+.head {
+    p {
+        color: $font-color;
+        font-size: 15px;
+        font-weight: 700;
     }
 }
 //bootstrap forms

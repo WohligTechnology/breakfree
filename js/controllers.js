@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload'])
 
 .controller('LoginCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -26,6 +26,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
+.controller('DashboardCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("dashboard");
+    $scope.menutitle = NavigationService.makeactive("Dashboard");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
 .controller('AdminCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("admin");
@@ -42,6 +50,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
+.controller('BrokerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("brokerlist");
+    $scope.menutitle = NavigationService.makeactive("Broker");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    $scope.rate = 1;
+    $scope.max = 5;
+    $scope.isReadonly = false;
+    $scope.hoveringOver = function(value) {
+        $scope.overStar = value;
+        $scope.percent = 100 * (value / $scope.max);
+    };
+})
+
 .controller('CreateBrokerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("createbroker");
@@ -49,10 +72,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+
+.controller('BuilderCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("builderlist");
+    $scope.menutitle = NavigationService.makeactive("Builder");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
 .controller('CreateBuilderCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("createbuilder");
     $scope.menutitle = NavigationService.makeactive("Create Builder");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+.controller('LeadCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("lead");
+    $scope.menutitle = NavigationService.makeactive("Lead");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
@@ -64,6 +104,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+
+.controller('EditLeadCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editlead");
+    $scope.menutitle = NavigationService.makeactive("Edit Lead");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+.controller('PropertyDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("propertydetail");
+    $scope.menutitle = NavigationService.makeactive("Property Detail");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
 .controller('CreatePropertyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("createproperty");
@@ -71,6 +128,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+
 .controller('AmenetiesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("ameneties");
@@ -78,12 +136,75 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
-.controller('PropertyDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+
+.controller('EmployeeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("propertydetail");
-    $scope.menutitle = NavigationService.makeactive("Property Detail");
+    $scope.template = TemplateService.changecontent("emplist");
+    $scope.menutitle = NavigationService.makeactive("Employee");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+    $scope.today = function() {
+        $scope.dt = new Date();
+    };
+    $scope.today();
+
+    $scope.clear = function() {
+        $scope.dt = null;
+    };
+
+    $scope.options = {
+        customClass: getDayClass,
+        minDate: new Date(),
+        showWeeks: true
+    };
+
+    // Disable weekend selection
+    function disabled(data) {
+        var date = data.date,
+            mode = data.mode;
+        return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+    }
+
+    $scope.toggleMin = function() {
+        $scope.options.minDate = $scope.options.minDate ? null : new Date();
+    };
+
+    $scope.toggleMin();
+
+    $scope.setDate = function(year, month, day) {
+        $scope.dt = new Date(year, month, day);
+    };
+
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    var afterTomorrow = new Date(tomorrow);
+    afterTomorrow.setDate(tomorrow.getDate() + 1);
+    $scope.events = [{
+        date: tomorrow,
+        status: 'null'
+    }, {
+        date: afterTomorrow,
+        status: 'null'
+    }];
+
+    function getDayClass(data) {
+        var date = data.date,
+            mode = data.mode;
+        if (mode === 'day') {
+            var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+
+            for (var i = 0; i < $scope.events.length; i++) {
+                var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+
+                if (dayToCheck === currentDay) {
+                    return $scope.events[i].status;
+                }
+            }
+        }
+
+        return '';
+    }
 })
 
 .controller('CreateEmployeeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -93,6 +214,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+
 .controller('EditEmployeeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("editemployee");
@@ -101,7 +223,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('EmpcalendarCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('EmpCalendarCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("empcalendar");
     $scope.menutitle = NavigationService.makeactive("Employee Calendar");
@@ -182,161 +304,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
 
-        $scope.changeLanguage = function() {
-            console.log("Language CLicked");
+    $scope.changeLanguage = function() {
+        console.log("Language CLicked");
 
-            if (!$.jStorage.get("language")) {
+        if (!$.jStorage.get("language")) {
+            $translate.use("hi");
+            $.jStorage.set("language", "hi");
+        } else {
+            if ($.jStorage.get("language") == "en") {
                 $translate.use("hi");
                 $.jStorage.set("language", "hi");
             } else {
-                if ($.jStorage.get("language") == "en") {
-                    $translate.use("hi");
-                    $.jStorage.set("language", "hi");
-                } else {
-                    $translate.use("en");
-                    $.jStorage.set("language", "en");
-                }
+                $translate.use("en");
+                $.jStorage.set("language", "en");
             }
-            //  $rootScope.$apply();
-        };
-
-
-    })
-    .controller('EmplistCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("emplist");
-        $scope.menutitle = NavigationService.makeactive("Employee List");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-
-        $scope.today = function() {
-            $scope.dt = new Date();
-        };
-        $scope.today();
-
-        $scope.clear = function() {
-            $scope.dt = null;
-        };
-
-        $scope.options = {
-            customClass: getDayClass,
-            minDate: new Date(),
-            showWeeks: true
-        };
-
-        // Disable weekend selection
-        function disabled(data) {
-            var date = data.date,
-                mode = data.mode;
-            return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
         }
-
-        $scope.toggleMin = function() {
-            $scope.options.minDate = $scope.options.minDate ? null : new Date();
-        };
-
-        $scope.toggleMin();
-
-        $scope.setDate = function(year, month, day) {
-            $scope.dt = new Date(year, month, day);
-        };
-
-        var tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        var afterTomorrow = new Date(tomorrow);
-        afterTomorrow.setDate(tomorrow.getDate() + 1);
-        $scope.events = [{
-            date: tomorrow,
-            status: 'null'
-        }, {
-            date: afterTomorrow,
-            status: 'null'
-        }];
-
-        function getDayClass(data) {
-            var date = data.date,
-                mode = data.mode;
-            if (mode === 'day') {
-                var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
-
-                for (var i = 0; i < $scope.events.length; i++) {
-                    var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
-
-                    if (dayToCheck === currentDay) {
-                        return $scope.events[i].status;
-                    }
-                }
-            }
-
-            return '';
-        }
-    })
+        //  $rootScope.$apply();
+    };
 
 
-.controller('headerctrl', function($scope, TemplateService) {
-    $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-        $(window).scrollTop(0);
-    });
-    $.fancybox.close(true);
-})
-
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
-
-        $scope.changeLanguage = function() {
-            console.log("Language CLicked");
-
-            if (!$.jStorage.get("language")) {
-                $translate.use("hi");
-                $.jStorage.set("language", "hi");
-            } else {
-                if ($.jStorage.get("language") == "en") {
-                    $translate.use("hi");
-                    $.jStorage.set("language", "hi");
-                } else {
-                    $translate.use("en");
-                    $.jStorage.set("language", "en");
-                }
-            }
-            //  $rootScope.$apply();
-        };
-
-
-    })
-    .controller('leadmanagementCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("leadmanagement");
-        $scope.menutitle = NavigationService.makeactive("Lead Management");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-    .controller('dashboardCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("dashboard");
-        $scope.menutitle = NavigationService.makeactive("Dashboard");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-    .controller('BrokerlistCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("brokerlist");
-        $scope.menutitle = NavigationService.makeactive("Broker");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-        $scope.rate = 1;
-        $scope.max = 5;
-        $scope.isReadonly = false;
-        $scope.hoveringOver = function(value) {
-  $scope.overStar = value;
-  $scope.percent = 100 * (value / $scope.max);
-};
-    })
-    .controller('BuilderlistCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("builderlist");
-        $scope.menutitle = NavigationService.makeactive("Builder");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-
-;
+});

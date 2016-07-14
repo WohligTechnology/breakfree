@@ -25,7 +25,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         })
         .state('dashboard', {
             url: "/dashboard",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'DashboardCtrl'
         })
         .state('admin', {
@@ -45,131 +45,131 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         })
         .state('employee', {
             url: "/employee",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EmployeeCtrl'
         })
         .state('createemployee', {
             url: "/create-employee",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'CreateEmployeeCtrl'
         })
         .state('editemployee', {
             url: "/edit-employee",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditEmployeeCtrl'
         })
         .state('empcalendar', {
             url: "/employee-calendar",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EmpCalendarCtrl'
         })
         .state('broker', {
             url: "/broker",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'BrokerCtrl'
         })
         .state('createbroker', {
             url: "/create-broker",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'CreateBrokerCtrl'
         })
         .state('editbroker', {
             url: "/edit-broker",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditBrokerCtrl'
         })
         .state('builder', {
             url: "/builder",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'BuilderCtrl'
         })
         .state('createbuilder', {
             url: "/create-builder",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'CreateBuilderCtrl'
         })
         .state('editbuilder', {
             url: "/edit-builder",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditBuilderCtrl'
         })
         .state('lead', {
             url: "/lead",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'LeadCtrl'
         })
         .state('createlead', {
             url: "/create-lead",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'CreateLeadCtrl'
         })
         .state('editlead', {
             url: "/edit-lead",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditLeadCtrl'
         })
         .state('propertydetail', {
             url: "/property-detail",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'PropertyDetailCtrl'
         })
         .state('createproperty', {
             url: "/create-property",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'CreatePropertyCtrl'
         })
         .state('editproperty', {
             url: "/edit-property",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditPropertyCtrl'
         })
         .state('moredetail', {
             url: "/more-detail",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'MoreDetailCtrl'
         })
         .state('editmoredetail', {
             url: "/edit-more-detail",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditMoreDetailCtrl'
         })
         .state('paymentdetail', {
             url: "/payment-detail",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'PaymentDetailCtrl'
         })
         .state('editpaymentdetail', {
             url: "/edit-payment-detail",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditPaymentDetailCtrl'
         })
         .state('ameneties', {
             url: "/ameneties",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'AmenetiesCtrl'
         })
         .state('editameneties', {
             url: "/edit-ameneties",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditAmenetiesCtrl'
         })
         .state('images', {
             url: "/images",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'ImagesCtrl'
         })
         .state('editimages', {
             url: "/edit-images",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'EditImagesCtrl'
         })
         .state('moreproperty', {
             url: "/more-property",
-            templateUrl: "views/template.html",
+            templateUrl: "views/template1.html",
             controller: 'MorePropertyCtrl'
         });
 
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/dashboard");
     $locationProvider.html5Mode(isproduction);
 });
 

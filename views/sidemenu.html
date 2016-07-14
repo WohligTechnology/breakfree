@@ -1,52 +1,16 @@
-<!-- <div class="brokmenu">
-    <div class="own-style">
-        <a ui-sref="user" class="text-uppercase">
-         Brokfree
-     </a>
-    </div>
-
-    needs to be put after logo to make it work
-     <div class="menu-button" toggle-off-canvas>
-     <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
-  </div>
-
-    <div class="usrinfo">
-        <div class="img-user inline-block">
-            <img src="img/usrimg.jpg" class="img-responsive" alt="">
-        </div>
-        <div class="usrname inline-block">
-            <h4>Chirag</h4>
-            <h4>Shah</h4>
-        </div>
-    </div>
-    <div class="nav-wrapper">
-        <ul class="nav">
-            <li class="nav-list dropdown">
-                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
-                    Main <span class="fa fa-chevron-down"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><span class="inline-block"><img src="img/house.png" alt="" class="img-responsive"></span><span class="submenu">Home</span></li>
-                    <li><span class="inline-block"><img src="img/admin.png" alt="" class="img-responsive"></span><span class="submenu">Admin</span></li>
-                </ul>
-            </li>
-        </ul>
-    </div> -->
 <div class="brokmenu">
     <div class="own-style">
-        <a ui-sref="user" class="text-uppercase">
+        <a ui-sref="dashboard" class="text-uppercase">
             Brokfree
         </a>
     </div>
 
-    needs to be put after logo to make it work
-    <div class="menu-button" toggle-off-canvas>
+    <!-- needs to be put after logo to make it work -->
+    <!-- <div class="menu-button" toggle-off-canvas>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-    </div>
+    </div> -->
 
     <div class="usrinfo">
         <div class="img-user inline-block">
@@ -57,21 +21,20 @@
             <h4>Shah</h4>
         </div>
     </div>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper borbot">
         <ul class="nav">
             <li class="nav-list dropdown">
                 <a type="button" class="dropdown-toggle" data-toggle="dropdown">
                        Main <span class="fa fa-chevron-down"></span>
                    </a>
                 <ul class="dropdown-menu">
-                    <li><span class="inline-block"><img src="img/house.png" alt="" class="img-responsive"></span><span class="submenu">Home</span></li>
-                    <li><span class="inline-block"><img src="img/admin.png" alt="" class="img-responsive"></span><span class="submenu">Admin</span></li>
-                    <li><span class="inline-block"><img src="img/property.png" alt="" class="img-responsive"></span><span class="submenu">Property</span></li>
+                    <li ui-sref="dashboard"><span class="inline-block"><img src="img/house.png" alt="" class="img-responsive"></span><span class="submenu">Home</span></li>
+                    <li ui-sref="lead"><span class="inline-block"><img src="img/admin.png" alt="" class="img-responsive"></span><span class="submenu">Lead</span></li>
+                    <li ui-sref="propertydetail"><span class="inline-block"><img src="img/property.png" alt="" class="img-responsive"></span><span class="submenu">Property</span></li>
                 </ul>
             </li>
         </ul>
     </div>
-    <hr>
     <div class="nav-wrapper">
         <ul class="nav">
             <li class="nav-list dropdown">
@@ -79,9 +42,9 @@
                        More <span class="fa fa-chevron-down"></span>
                    </a>
                 <ul class="dropdown-menu">
-                    <li><span class="inline-block"><img src="img/worker.png" alt="" class="img-responsive"></span><span class="submenu">Builder</span></li>
-                    <li><span class="inline-block"><img src="img/BROKER.png" alt="" class="img-responsive"></span><span class="submenu">Broker</span></li>
-                    <li><span class="inline-block"><img src="img/employee.png" alt="" class="img-responsive"></span><span class="submenu">Employee</span></li>
+                    <li class="menus" ui-sref="builder"><span class="inline-block"><img src="img/worker.png" alt="" class="img-responsive"></span><span class="submenu">Builder</span></li>
+                    <li ui-sref="broker"><span class="inline-block"><img src="img/BROKER.png" alt="" class="img-responsive"></span><span class="submenu">Broker</span></li>
+                    <li ui-sref="employee"><span class="inline-block"><img src="img/employee.png" alt="" class="img-responsive"></span><span class="submenu">Employee</span></li>
                       <li><span class="inline-block"><img src="img/Help.png" alt="" class="img-responsive"></span><span class="submenu">Help</span></li>
                 </ul>
             </li>

@@ -480,12 +480,15 @@ a {
 .nav-wrapper {
     .nav {
         .nav-list li {
-            padding: 12px 20px 10px;
+            padding: 9px 20px 9px;
+        }
+        .menus{
+          padding: 9px 20px 6px !important;
         }
         a {
             color: $font-color;
             font-size: 16px;
-            padding: 10px 20px;
+            padding: 10px 18px;
             &:active,
             &:hover {
                 background-color: transparent;
@@ -515,7 +518,7 @@ a {
                     content: '';
                     width: 5px;
                     background-color: #d98c00;
-                    height: 48px;
+                    height: 43px;
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -524,7 +527,29 @@ a {
                 &:hover {
                     cursor: pointer;
                     background-color: #f3bc3a;
-                    padding: 12px 20px 10px;
+                    padding: 9px 20px 9px;
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+            .menus {
+                position: relative;
+                cursor: pointer;
+                &:after {
+                    content: '';
+                    width: 5px;
+                    background-color: #d98c00;
+                    height: 43px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: #f3bc3a;
+                    padding: 9px 20px 9px;
                     &:after {
                         opacity: 1;
                     }
@@ -553,7 +578,7 @@ a {
             padding: 0 14px;
             font-size: 18px;
             letter-spacing: 1px;
-            vertical-align: initial;
+            vertical-align: top;
         }
         .fa {
             color: $font-color;
@@ -979,6 +1004,7 @@ td {
 }
 .propsize {
     margin: -4px 0;
+    font-weight: 700;
 }
 .more-property {
     h4 {
@@ -1182,6 +1208,13 @@ ol.flex-control-nav.flex-control-paging {
         line-height: 0;
         vertical-align: text-bottom;
     }
+}
+.borbot{
+  border-bottom: 1px solid #080c18;
+  height:201px;
+}
+.price{
+  height: 412px;
 }
 //bootstrap forms
 /* Start writing sass here */

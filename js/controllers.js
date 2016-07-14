@@ -49,7 +49,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
-
+.controller('EditAdminCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editadmin");
+    $scope.menutitle = NavigationService.makeactive("Edit Admin");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 .controller('BrokerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("brokerlist");
@@ -72,6 +78,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+.controller('EditBrokerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editbroker");
+    $scope.menutitle = NavigationService.makeactive("Edit Broker");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 
 .controller('BuilderCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -88,7 +101,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
-
+.controller('EditBuilderCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editbuilder");
+    $scope.menutitle = NavigationService.makeactive("Edit Builder");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 .controller('LeadCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("lead");
@@ -128,6 +147,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+.controller('EditPropertyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editproperty");
+    $scope.menutitle = NavigationService.makeactive("Edit Property");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 .controller('MoreDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("moredetail");
@@ -135,10 +161,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+.controller('EditMoreDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editmoredetail");
+    $scope.menutitle = NavigationService.makeactive("Edit More Detail");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 .controller('PaymentDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("paymentdetail");
     $scope.menutitle = NavigationService.makeactive("Payment & Price Detail");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('EditPaymentDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editpaymentdetail");
+    $scope.menutitle = NavigationService.makeactive("Edit Payment & Price Detail");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })

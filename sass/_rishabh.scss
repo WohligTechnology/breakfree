@@ -338,3 +338,71 @@ th {
     }
   }
 }
+.upl-admin{
+  .attach{
+    .btn-upload{
+     margin-left: 22px;
+    }
+  }
+  }
+  .bf-form {
+      .form-control {
+          border-color: $city-border;
+          background-color: $page-color;
+      }
+      p {
+          color: $font-color;
+      }
+      span {
+          color: $font-color;
+      }
+  }
+
+.property-offer{
+
+  position: relative;
+  .panel-title{
+    margin-top: 10px;
+  }
+}
+.underline{
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+}
+.offer{
+  h4{
+    color:$font-color;
+    margin: 0;
+    font-size:16px;
+    font-weight: 700;
+  }
+  p{
+    color:$font-color;
+    margin: 0;
+    font-size:15px;
+  }
+  span{
+    color:$font-color;
+    margin: 0;
+    font-size:15px;
+  }
+}
+.property-head{
+  margin-left: 10px;
+}
+.offer-content{
+  margin-left: 10px;
+}
+.offer-para{
+  padding-top: 5px;
+}
+.close-pos{
+  img
+  {
+    width: 25px;
+    position: absolute;
+    top: -5px;
+    right: 17px;
+}
+}

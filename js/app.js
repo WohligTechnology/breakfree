@@ -38,6 +38,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'CreateAdminCtrl'
         })
+        .state('editadmin', {
+            url: "/edit-admin",
+            templateUrl: "views/template.html",
+            controller: 'EditAdminCtrl'
+        })
         .state('employee', {
             url: "/employee",
             templateUrl: "views/template.html",
@@ -68,6 +73,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'CreateBrokerCtrl'
         })
+        .state('editbroker', {
+            url: "/edit-broker",
+            templateUrl: "views/template.html",
+            controller: 'EditBrokerCtrl'
+        })
         .state('builder', {
             url: "/builder",
             templateUrl: "views/template.html",
@@ -77,6 +87,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             url: "/create-builder",
             templateUrl: "views/template.html",
             controller: 'CreateBuilderCtrl'
+        })
+        .state('editbuilder', {
+            url: "/edit-builder",
+            templateUrl: "views/template.html",
+            controller: 'EditBuilderCtrl'
         })
         .state('lead', {
             url: "/lead",
@@ -103,15 +118,30 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'CreatePropertyCtrl'
         })
+        .state('editproperty', {
+            url: "/edit-property",
+            templateUrl: "views/template.html",
+            controller: 'EditPropertyCtrl'
+        })
         .state('moredetail', {
             url: "/more-detail",
             templateUrl: "views/template.html",
             controller: 'MoreDetailCtrl'
         })
+        .state('editmoredetail', {
+            url: "/edit-more-detail",
+            templateUrl: "views/template.html",
+            controller: 'EditMoreDetailCtrl'
+        })
         .state('paymentdetail', {
             url: "/payment-detail",
             templateUrl: "views/template.html",
             controller: 'PaymentDetailCtrl'
+        })
+        .state('editpaymentdetail', {
+            url: "/edit-payment-detail",
+            templateUrl: "views/template.html",
+            controller: 'EditPaymentDetailCtrl'
         })
         .state('ameneties', {
             url: "/ameneties",

@@ -1,6 +1,6 @@
 <div class="panel panel-default table-dynamic">
     <div class="panel-heading">
-        <h3 class="panel-title">Create Broker</h3>
+        <h3 class="panel-title">Edit Admin</h3>
     </div>
     <div class="panel-body">
         <div class="row">
@@ -23,40 +23,44 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Broker Type</label>
-                                <div class="custom-select">
-                                    <select class="form-control">
-                                        <option>seller</option>
-                                        <option>seller</option>
-                                        <option>seller</option>
-                                        <option>seller</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Mobile Number</label>
-                        <input type="text" class="form-control" id="mobilenumber" placeholder="Enter mobile number">
-                      </div> -->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email1">Email</label>
-                                <input type="email" class="form-control" id="email1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Mobile Number</label>
-                                <input type="text" class="form-control" id="Mobile">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="pwd">Password:</label>
+                                <label for="Mobile">Mobile Number</label>
+                                <input type="tel" class="form-control" id="Mobile">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">City</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="Mobile">Location</label>
+                                <input type="tel" class="form-control" id="Mobile">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea class="form-control boxsize" id="exampleTextarea" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="pwd">Password</label>
                                 <input type="password" class="form-control" id="pwd">
                             </div>
                         </div>
@@ -64,22 +68,15 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Rating</label>
-                                <div class="custom-select">
-                                  <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                  </select>
-                                </div>
+                                <label for="date2">Start Date</label>
+                                <input type="date" class="form-control" id="date2">
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Address</label>
-                                <textarea class="form-control boxsize" id="exampleTextarea" rows="5"></textarea>
+                                <label for="date1">End Date</label>
+                                <input type="date" class="form-control" id="date1">
                             </div>
                         </div>
                     </div>
@@ -91,18 +88,16 @@
             </div>
             <div class="col-md-5">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-offset-4 col-md-6">
                         <div class="in-image upl-admin">
                             <div class="city-imgs">
+                                <!-- <img alt="" /> -->
                             </div>
                             <upload-image no-view></upload-image>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </div>

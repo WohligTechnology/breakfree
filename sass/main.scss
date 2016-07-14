@@ -968,20 +968,199 @@ td {
         font-size: 16px;
     }
 }
-.more-propertyform{
-  margin-bottom: 30px;
+.more-propertyform {
+    margin-bottom: 30px;
 }
-.basicproperty{
-      padding: 10px 0 10px 10px;
+.basicproperty {
+    padding: 10px 0 10px 10px;
 }
-.basicproperties{
-  padding: 28px 10px 10px 10px;
-  margin-bottom: 30px;
+.basicproperties {
+    padding: 28px 10px 10px;
+    margin-bottom: 30px;
 }
-.ccheck{
-  label{
-    padding: 0 20px !important;
-  }
+.ccheck {
+    label {
+        padding: 0 20px !important;
+    }
+}
+ol.flex-control-nav.flex-control-paging {
+    display: none;
+}
+.property-slider {
+    .flexslider {
+        background: transparent;
+        border: 0;
+        margin-bottom: 30px;
+    }
+    .flex-direction-nav {
+        .flex-next {
+            right: 13px;
+            text-align: right;
+        }
+        .flex-prev {
+            left: 13px;
+            text-align: left;
+        }
+        a {
+            opacity: 1;
+            width: 19px;
+            height: 34px;
+            color: rgba(255, 174, 0, 1);
+            &:before {
+                color: rgba(255, 174, 0, 1);
+                font-size: 30px;
+                text-shadow: none;
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+}
+.property-slider {
+    position: relative;
+}
+.prop-address {
+    position: absolute;
+    bottom: 0;
+    margin: 15px 10px;
+    h4 {
+        color: white;
+        font-size: 16px;
+        padding: 0 10px;
+        margin: 0;
+    }
+    p {
+        color: white;
+        font-size: 15px;
+        padding: 0 10px;
+        margin: 0;
+    }
+}
+.ameneties-check {
+    .prop-amen {
+        margin-top: 30px;
+        color: $font-color;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 0 14px;
+    }
+}
+.prop-info {
+    margin: 0 0 25px;
+    p {
+        color: $font-color;
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+.property-info {
+    margin: 20px 0 0;
+    span {
+        color: $font-color;
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+.location-map {
+    p {
+        font-weight: 700;
+        color: $font-color;
+        font-size: 15px;
+        margin: 15px 0 12px;
+    }
+}
+.buy {
+    .bank {
+        color: $font-color;
+        font-weight: 700;
+    }
+    h4 {
+        color: $font-color;
+        font-weight: 700;
+        margin: 0;
+        .fa {
+            color: $font-color;
+            font-size: 18px;
+            margin: 0 10px 0 0;
+        }
+    }
+    .startfrom {
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .property-data {
+        span {
+            line-height: 36px;
+            font-size: 15px;
+            color: $font-color;
+        }
+        .span-pad {
+            padding: 0 10px 0 0;
+        }
+    }
+    .checkboxs {
+        margin: 25px 0;
+    }
+    .form-btns {
+        margin: 24px 0 24px 2px;
+    }
+}
+.btn8 {
+    margin-right: 22px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 9px 44px;
+}
+.btn9 {
+    margin-right: 0;
+}
+.bank-icons {
+    margin-left: 2px;
+}
+.bank-names {
+    width: 127px;
+    margin-right: 15px;
+}
+.listedby {
+    h4 {
+        color: $font-color;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    p {
+        color: $font-color;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+.agentinfo {
+    padding: 18px 0;
+    border-bottom: 0;
+}
+.img-agent {
+    width: 70px;
+    height: 70px;
+}
+.agent-info {
+    padding: 10px;
+    .fa {
+        font-size: 24px;
+        color: $font-color;
+        vertical-align: middle;
+        line-height: 40px;
+    }
+    .span-data {
+        font-size: 16px;
+        color: $font-color;
+        line-height: 40px;
+    }
+    .addr {
+        line-height: 0;
+        vertical-align: text-bottom;
+    }
 }
 //bootstrap forms
 /* Start writing sass here */

@@ -193,10 +193,30 @@ th {
 .city-size {
     width: 60%;
     margin: 24px 6px 26px;
+    position: relative;
+    img {
+        padding: 2px;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
 .city-sizes {
     width: 60%;
     margin: 2px 2px 18px;
+    position: relative;
+    img {
+        padding: 2px;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
 .bank-name {
     width: 150px;
@@ -268,4 +288,53 @@ th {
             padding: 9px 34px;
         }
     }
+}
+.city-fit {
+    width: 100%;
+    margin: 0 -2px 18px;
+    position: relative;
+    img {
+        padding: 2px;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.image-set {
+    width: 100%;
+    position: relative;
+    img {
+        padding: 2px;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.price-range .attach {
+    // margin-left: -15px;
+}
+.city-set{
+  height: 165px;
+    border: 1px solid #aaafb8;
+}
+.gallery{
+  .attach{
+    .btn-upload{
+      margin: 0;
+    }
+  }
+
+}
+.ups-image{
+  .attach{
+    .btn-upload{
+      margin:1px;
+    }
+  }
 }

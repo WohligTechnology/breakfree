@@ -341,7 +341,7 @@ th {
 .upl-admin{
   .attach{
     .btn-upload{
-     margin-left: 22px;
+     margin-left: 14px;
     }
   }
   }
@@ -358,6 +358,7 @@ th {
  border-color: #aaafb8;
 }
 .offer{
+  margin-bottom: 30px;
   h4{
     color:$font-color;
     margin: 0;
@@ -380,9 +381,10 @@ th {
 }
 .offer-content{
   margin-left: 10px;
+  margin-bottom: 30px;
 }
 .offer-para{
-  padding-top: 5px;
+  padding-top: 20px;
 }
 .close-pos{
   img

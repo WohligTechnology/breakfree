@@ -132,12 +132,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('PropertyDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('PropertyDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("propertydetail");
     $scope.menutitle = NavigationService.makeactive("Property Detail");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.wall= [{
+          img: "img/pdetail.jpg",
+      }, {
+          img: "img/pdetail.jpg",
+      }, {
+          img: "img/pdetail.jpg",
+      }, {
+          img: "img/pdetail.jpg",
+      }];
+      $scope.openOffer = function() {
+          var open = $uibModal.open({
+              animation: $scope.animationsEnabled,
+              templateUrl: 'views/modal/offer.html',
+              controller: 'PropertyDetailCtrl'
+          });
+
+      };
+      $scope.openTrade = function() {
+          var open = $uibModal.open({
+              animation: $scope.animationsEnabled,
+              templateUrl: 'views/modal/trade.html',
+              controller: 'PropertyDetailCtrl'
+          });
+
+      };
 })
 
 .controller('CreatePropertyCtrl', function($scope, TemplateService, NavigationService, $timeout) {

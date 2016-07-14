@@ -189,10 +189,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+.controller('EditAmenetiesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editameneties");
+    $scope.menutitle = NavigationService.makeactive("Edit Ameneties");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 .controller('ImagesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("images");
     $scope.menutitle = NavigationService.makeactive("Images");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('EditImagesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editimages");
+    $scope.menutitle = NavigationService.makeactive("Edit Images");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })

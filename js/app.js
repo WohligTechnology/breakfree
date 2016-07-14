@@ -148,10 +148,20 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'AmenetiesCtrl'
         })
+        .state('editameneties', {
+            url: "/edit-ameneties",
+            templateUrl: "views/template.html",
+            controller: 'EditAmenetiesCtrl'
+        })
         .state('images', {
             url: "/images",
             templateUrl: "views/template.html",
             controller: 'ImagesCtrl'
+        })
+        .state('editimages', {
+            url: "/edit-images",
+            templateUrl: "views/template.html",
+            controller: 'EditImagesCtrl'
         })
         .state('moreproperty', {
             url: "/more-property",

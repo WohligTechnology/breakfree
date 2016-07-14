@@ -109,7 +109,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             controller: 'MoreDetailCtrl'
         })
         .state('paymentdetail', {
-            url: "/paymentdetail",
+            url: "/payment-detail",
             templateUrl: "views/template.html",
             controller: 'PaymentDetailCtrl'
         })

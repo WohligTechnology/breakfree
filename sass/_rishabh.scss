@@ -345,19 +345,6 @@ th {
     }
   }
   }
-  .bf-form {
-      .form-control {
-          border-color: $city-border;
-          background-color: $page-color;
-      }
-      p {
-          color: $font-color;
-      }
-      span {
-          color: $font-color;
-      }
-  }
-
 .property-offer{
 
   position: relative;
@@ -368,7 +355,7 @@ th {
 .underline{
   margin-top: 8px;
   margin-bottom: 8px;
-
+ border-color: #aaafb8;
 }
 .offer{
   h4{

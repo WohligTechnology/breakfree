@@ -24,19 +24,22 @@
 }
 .img-name {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 38%;
+    left: 11%;
     color: white;
     text-align: center;
     font-size: 20px;
+}
+.tlplace {
+    top: 40%;
+    left: 18%;
 }
 .heading h4 {
     color: $font-color;
     font-weight: 700;
 }
 .img-holder {
-  cursor: pointer;
+    cursor: pointer;
     height: 215px;
     width: 100%;
     position: relative;
@@ -320,79 +323,76 @@ th {
 .price-range .attach {
     // margin-left: -15px;
 }
-.city-set{
-  height: 165px;
+.city-set {
+    height: 165px;
     border: 1px solid #aaafb8;
 }
-.gallery{
-  .attach{
-    .btn-upload{
-      margin: 0;
+.gallery {
+    .attach {
+        .btn-upload {
+            margin: 0;
+        }
     }
-  }
-
 }
-.ups-image{
-  .attach{
-    .btn-upload{
-      margin:1px;
+.ups-image {
+    .attach {
+        .btn-upload {
+            margin: 1px;
+        }
     }
-  }
 }
-.upl-admin{
-  .attach{
-    .btn-upload{
-     margin-left: 14px;
+.upl-admin {
+    .attach {
+        .btn-upload {
+            margin-left: 14px;
+        }
     }
-  }
-  }
-.property-offer{
-
-  position: relative;
-  .panel-title{
-    margin-top: 10px;
-  }
 }
-.underline{
-  margin-top: 8px;
-  margin-bottom: 8px;
- border-color: #aaafb8;
+.property-offer {
+    position: relative;
+    .panel-title {
+        margin-top: 10px;
+    }
 }
-.offer{
-  margin-bottom: 30px;
-  h4{
-    color:$font-color;
-    margin: 0;
-    font-size:16px;
-    font-weight: 700;
-  }
-  p{
-    color:$font-color;
-    margin: 0;
-    font-size:15px;
-  }
-  span{
-    color:$font-color;
-    margin: 0;
-    font-size:15px;
-  }
+.underline {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-color: #aaafb8;
 }
-.property-head{
-  margin-left: 10px;
+.offer {
+    margin-bottom: 30px;
+    h4 {
+        color: $font-color;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    p {
+        color: $font-color;
+        margin: 0;
+        font-size: 15px;
+    }
+    span {
+        color: $font-color;
+        margin: 0;
+        font-size: 15px;
+    }
 }
-.offer-content{
-  margin-left: 10px;
-  margin-bottom: 30px;
+.property-head {
+    margin-left: 10px;
 }
-.offer-para{
-  padding-top: 20px;
+.offer-content {
+    margin-left: 10px;
+    margin-bottom: 30px;
 }
-.close-pos{
-  img
-  {
-    width: 25px;
-    position: absolute;
-    top: -5px;
-    right: 17px;
+.offer-para {
+    padding-top: 20px;
 }
+.close-pos {
+    img {
+        width: 25px;
+        position: absolute;
+        top: -5px;
+        right: 17px;
+    }
 }

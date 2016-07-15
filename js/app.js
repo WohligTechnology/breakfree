@@ -14,7 +14,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
         .state('login', {
-            url: "/",
+            url: "/login",
             templateUrl: "views/template-login.html",
             controller: 'LoginCtrl'
         })

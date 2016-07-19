@@ -113,6 +113,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template1.html",
             controller: 'LeadLogCtrl'
         })
+      
         .state('createlog', {
             url: "/create-log",
             templateUrl: "views/template1.html",

@@ -108,6 +108,21 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template1.html",
             controller: 'EditLeadCtrl'
         })
+        .state('leadlog', {
+            url: "/lead-log",
+            templateUrl: "views/template1.html",
+            controller: 'LeadLogCtrl'
+        })
+        .state('createlog', {
+            url: "/create-log",
+            templateUrl: "views/template1.html",
+            controller: 'CreateLogCtrl'
+        })
+        .state('project', {
+            url: "/project",
+            templateUrl: "views/template1.html",
+            controller: 'ProjectCtrl'
+        })
         .state('propertydetail', {
             url: "/property-detail",
             templateUrl: "views/template1.html",

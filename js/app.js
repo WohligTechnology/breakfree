@@ -113,7 +113,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template1.html",
             controller: 'LeadLogCtrl'
         })
-      
+
         .state('createlog', {
             url: "/create-log",
             templateUrl: "views/template1.html",
@@ -124,10 +124,20 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template1.html",
             controller: 'ProjectCtrl'
         })
+        .state('submitproject', {
+            url: "/submitproject",
+            templateUrl: "views/template1.html",
+            controller: 'SubmitProjectCtrl'
+        })
         .state('propertydetail', {
             url: "/property-detail",
             templateUrl: "views/template1.html",
             controller: 'PropertyDetailCtrl'
+        })
+        .state('propertylist', {
+            url: "/propertylist",
+            templateUrl: "views/template1.html",
+            controller: 'PropertyListCtrl'
         })
         .state('createproperty', {
             url: "/create-property",

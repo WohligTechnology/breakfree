@@ -67,8 +67,10 @@
 }
 .img-name {
     position: absolute;
-    top: 38%;
-    left: 11%;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    width: 100%;
     color: white;
     text-align: center;
     font-size: 20px;
@@ -387,7 +389,7 @@ th {
 .upl-admin {
     .attach {
         .btn-upload {
-            margin-left: 14px;
+            margin-left: 20px;
         }
     }
 }
@@ -451,4 +453,19 @@ th {
 }
 .dashcen{
   margin: 10px 0;
+}
+.pd10{
+  padding: 10px;
+}
+.mg-10{
+  margin-top: -20px;
+}
+.mgr-10{
+  margin: -10px;
+}
+.elip{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+  width: 127px;
 }

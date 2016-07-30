@@ -1,9 +1,9 @@
 <div class="panel panel-default table-dynamic">
     <div class="panel-heading">
-        <h3 class="panel-title">Project</h3>
+        <h3 class="panel-title">Property List</h3>
     </div>
     <div class="admindetail">
-        <h3 class="submenu pull-left">Project List</h3>
+        <h3 class="submenu pull-left">Property Detail</h3>
         <div class="search pull-right">
             <span><i class="fa fa-search"></i></span>
             <input type="text" class="searchsize" name="name" placeholder="Search...">
@@ -29,8 +29,21 @@
                 </div>
                 <div class="shows pull-right">
                     <div class="category-list dropdown">
-                        <button type="button" class="btns dropdown-toggle" data-toggle="dropdown">
-                            Show <span class="fa fa-chevron-down"></span>
+                        <button type="button" class="btns btn3 dropdown-toggle" data-toggle="dropdown">
+                            Show<span class="fa fa-chevron-down"></span>
+                        </button>
+                        <!-- <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul> -->
+                    </div>
+                </div>
+                <div class="shows1 pull-right">
+                    <div class="category-list dropdown">
+                        <button type="button" class="btns btn3 dropdown-toggle" data-toggle="dropdown">
+                            Select Date<span class="fa fa-chevron-down"></span>
                         </button>
                         <!-- <ul class="dropdown-menu">
                             <li></li>
@@ -46,7 +59,7 @@
                             <th></th>
                             <th>
                                 <div class="th">
-                                    Id
+                                    ID
                                     <!-- <span ng-click="pagedata.sort = '_id';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == '_id && pagedata.sortnum == 1)}"></span>
                          <span ng-click="pagedata.sort = '_id';pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == '_id' && pagedata.sortnum == -1)}"></span> -->
                                 </div>
@@ -58,23 +71,13 @@
                          <span ng-click="pagedata.sort = 'name';pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'name' && pagedata.sortnum == -1)}"></span> -->
                                 </div>
                             </th>
-
                             <th>
                                 <div class="th">
-                                    Builder
+                                    Project
                                     <!-- <span ng-click="pagedata.sort = 'email';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == 1)}"></span>
-                       <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
+                         <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
                                 </div>
                             </th>
-
-                            <th>
-                                <div class="th">
-                                    Dexcription
-                                    <!-- <span ng-click="pagedata.sort = 'email';pagedata.sortnum=1;search();" class="fa fa-angle-up" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == 1)}"></span>
-                        <span ng-click="pagedata.sort = 'email' ;pagedata.sortnum=-1;search();" class="fa fa-angle-down" ng-class="{active: (pagedata.sort == 'email' && pagedata.sortnum == -1)}"></span> -->
-                                </div>
-                            </th>
-
                             <th>
                                 <div class="th">
                                     Action
@@ -97,19 +100,14 @@
                             </td>
                             <td>ASD145</td>
                             <td>
-                                <span>Aims Sea view</span>
-                            </td>
-
-                            <td>
                                 <span>Aims Group</span>
                             </td>
                             <td>
-                                Emerging in the centrally loocated hub of Mira Road
+                                <span>Aims Sea view</span>
                             </td>
-
                             <td>
                                 <a>
-                                    <i class="fa fa-pencil-square-o" ui-sref="editproperty"></i>
+                                    <i class="fa fa-pencil-square-o" ui-sref="editlead"></i>
                                 </a>
                                 <a>
                                     <i class="fa fa-trash"></i>
@@ -125,19 +123,14 @@
                             </td>
                             <td>ASD145</td>
                             <td>
-                                <span>Aims Sea view</span>
-                            </td>
-
-                            <td>
                                 <span>Aims Group</span>
                             </td>
                             <td>
-                                Emerging in the centrally loocated hub of Mira Road
+                                <span>Aims Sea view</span>
                             </td>
-
                             <td>
                                 <a>
-                                    <i class="fa fa-pencil-square-o" ui-sref="editproperty"></i>
+                                    <i class="fa fa-pencil-square-o" ui-sref="editlead"></i>
                                 </a>
                                 <a>
                                     <i class="fa fa-trash"></i>
@@ -153,19 +146,14 @@
                             </td>
                             <td>ASD145</td>
                             <td>
-                                <span>Aims Sea view</span>
-                            </td>
-
-                            <td>
                                 <span>Aims Group</span>
                             </td>
                             <td>
-                                Emerging in the centrally loocated hub of Mira Road
+                                <span>Aims Sea view</span>
                             </td>
-
                             <td>
                                 <a>
-                                    <i class="fa fa-pencil-square-o" ui-sref="editproperty"></i>
+                                    <i class="fa fa-pencil-square-o" ui-sref="editlead"></i>
                                 </a>
                                 <a>
                                     <i class="fa fa-trash"></i>
@@ -176,10 +164,29 @@
                 </table>
             </div>
             <div class="col-md-3">
-                <button class="btn btn1 btn-info pull-right" ui-sref="submitproject">
-                    Create New Project<i class="fa fa-plus"></i>
+                <button class="btn btn1 btn-info pull-right" ui-sref="createproperty">
+                    Create New Property<i class="fa fa-plus"></i>
                 </button>
             </div>
         </div>
+        <!-- <footer class="table-footer" ng-if="userdata.data.length>0">
+            <div class="row">
+                <div class="col-md-6 page-num-info">
+                    <span>
+            Show
+            <select ng-model="pagedata.limit" ng-change="search();">
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+            entries per page
+          </span>
+                </div>
+                <div class="col-md-6 text-right pagination-container">
+                    <uib-pagination total-items="userdata.totalpages" ng-model="pagedata.page" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="search();" items-per-page="pagedata.limit" ng-hide="userdata.totalpages==1"></uib-pagination>
+                </div>
+            </div>
+        </footer> -->
     </div>
 </div>

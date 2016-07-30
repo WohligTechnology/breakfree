@@ -219,10 +219,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
-.controller('SubmitProjectCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('CreateProjectCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("submitproject");
-    $scope.menutitle = NavigationService.makeactive("SubmitProject");
+    $scope.template = TemplateService.changecontent("createproject");
+    $scope.menutitle = NavigationService.makeactive("CreateProject");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })

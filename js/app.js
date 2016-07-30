@@ -124,10 +124,10 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template1.html",
             controller: 'ProjectCtrl'
         })
-        .state('submitproject', {
-            url: "/submitproject",
+        .state('createproject', {
+            url: "/createproject",
             templateUrl: "views/template1.html",
-            controller: 'SubmitProjectCtrl'
+            controller: 'CreateProjectCtrl'
         })
         .state('propertydetail', {
             url: "/property-detail",

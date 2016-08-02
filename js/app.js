@@ -125,17 +125,22 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             controller: 'ProjectCtrl'
         })
         .state('createproject', {
-            url: "/createproject",
+            url: "/create-project",
             templateUrl: "views/template1.html",
             controller: 'CreateProjectCtrl'
+        })
+        .state('editproject', {
+            url: "/edit-project",
+            templateUrl: "views/template1.html",
+            controller: 'EditProjectCtrl'
         })
         .state('propertydetail', {
             url: "/property-detail",
             templateUrl: "views/template1.html",
             controller: 'PropertyDetailCtrl'
         })
-        .state('propertylist', {
-            url: "/propertylist",
+        .state('property', {
+            url: "/property",
             templateUrl: "views/template1.html",
             controller: 'PropertyListCtrl'
         })

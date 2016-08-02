@@ -222,7 +222,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('CreateProjectCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("createproject");
-    $scope.menutitle = NavigationService.makeactive("CreateProject");
+    $scope.menutitle = NavigationService.makeactive("Create Project");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('EditProjectCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("editproject");
+    $scope.menutitle = NavigationService.makeactive("Edit Project");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
